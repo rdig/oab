@@ -13,7 +13,14 @@ module.exports = controller => {
   controller.on(
     'dialog_submission',
     (oab, event) => {
+      /*
+       * @TODO Better user submission feedback message
+       */
       oab.whisper(event, 'Got it!');
+      /*
+       * @TODO Submit data to Google Sheets
+       * @TODO If not anonymous post message to channel
+       */
       // call dialogOk or else Slack will think this is an error
       oab.dialogOk();
     },

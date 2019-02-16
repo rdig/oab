@@ -20,7 +20,9 @@
     "request": "^2.79.0",
     "wordfilter": "^0.2.6"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "googleapis": "27"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/rdig/oab.git"

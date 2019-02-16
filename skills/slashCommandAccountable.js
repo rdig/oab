@@ -1,14 +1,14 @@
 const accountabilityDialog = require('../components/accountabilityDialog');
 
 module.exports = controller => {
-  controller.on('slash_command', (bot, message) => {
+  controller.on('slash_command', (oab, event) => {
     // bot.replyPrivate(
     //   message,
     //   'Your accountability submission remains secret...',
     // );
-    bot.replyWithDialog(
-      message,
-      accountabilityDialog(bot).asObject(),
+    oab.replyWithDialog(
+      event,
+      accountabilityDialog(oab).asObject(),
     );
   })
 };
