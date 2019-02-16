@@ -68,6 +68,16 @@ if (!process.env.clientId || !process.env.clientSecret) {
   // who sign up for the app via the oauth
   require(__dirname + '/components/user_registration.js')(controller);
 
+  /*
+   * Handle /accountable slash command
+   */
+  require(__dirname + '/skills/slashCommandAccountable.js')(controller);
+
+  /*
+   * Handle dialog submission
+   */
+  require(__dirname + '/controller/dialogSubmissions.js')(controller);
+
   // Send an onboarding message when a new team joins
   // require(__dirname + '/components/onboarding.js')(controller);
 
