@@ -1,15 +1,16 @@
 const fs = require('fs');
 const { google } = require('googleapis');
 const authorize = require('./googleAuthorize');
+const env = require('node-env-file')('.env');
 
-function insertValues(auth, id, range, values, callback) {
+function insertValues(auth, range, values, callback) {
   const sheets = google.sheets({
     version: 'v4',
     auth
   });
   sheets.spreadsheets.values.append(
     {
-      spreadsheetId: id,
+      spreadsheetId: process.env.spreadSheetId,
       range,
       valueInputOption: 'RAW',
       insertDataOption: 'INSERT_ROWS',
@@ -29,7 +30,7 @@ function insertValues(auth, id, range, values, callback) {
   );
 }
 
-module.exports = (id, range, values, callback) => fs.readFile(
+module.exports = (range, values, callback) => fs.readFile(
   // Load client secrets from a local file.
   'credentials.json',
   (err, content) => {
@@ -39,7 +40,7 @@ module.exports = (id, range, values, callback) => fs.readFile(
     // Authorize a client with credentials, then call the Google Sheets API.
     authorize(
       JSON.parse(content),
-      oAuthInstance => insertValues(oAuthInstance, id, range, values, callback),
+      oAuthInstance => insertValues(oAuthInstance, range, values, callback),
     );
   },
 );

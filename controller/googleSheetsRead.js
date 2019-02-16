@@ -1,20 +1,21 @@
 const fs = require('fs');
 const { google } = require('googleapis');
 const authorize = require('./googleAuthorize');
+const env = require('node-env-file')('.env');
 
 /**
  * Prints the names and majors of students in a sample spreadsheet:
  * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
  * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
  */
-const listValues = (auth, id, range, callback) => {
+const listValues = (auth, range, callback) => {
   const sheets = google.sheets({
     version: 'v4',
     auth,
   });
   sheets.spreadsheets.values.get(
     {
-      spreadsheetId: id,
+      spreadsheetId: process.env.spreadSheetId,
       range,
     },
     (err, res) => {
@@ -27,7 +28,7 @@ const listValues = (auth, id, range, callback) => {
   );
 }
 
-module.exports = (id, range, callback) => fs.readFile(
+module.exports = (range, callback) => fs.readFile(
   // Load client secrets from a local file.
   'credentials.json',
   (err, content) => {
@@ -37,7 +38,7 @@ module.exports = (id, range, callback) => fs.readFile(
     // Authorize a client with credentials, then call the Google Sheets API.
     authorize(
       JSON.parse(content),
-      oAuthInstance => listValues(oAuthInstance, id, range, callback),
+      oAuthInstance => listValues(oAuthInstance, range, callback),
     );
   },
 );
