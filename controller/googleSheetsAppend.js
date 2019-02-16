@@ -2,32 +2,34 @@ const fs = require('fs');
 const { google } = require('googleapis');
 const authorize = require('./googleAuthorize');
 
-/**
- * Prints the names and majors of students in a sample spreadsheet:
- * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
- * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
- */
-const listValues = (auth, id, range, callback) => {
+function insertValues(auth, id, range, values, callback) {
   const sheets = google.sheets({
     version: 'v4',
-    auth,
+    auth
   });
-  sheets.spreadsheets.values.get(
+  sheets.spreadsheets.values.append(
     {
       spreadsheetId: id,
       range,
+      valueInputOption: 'RAW',
+      insertDataOption: 'INSERT_ROWS',
+      resource: {
+        values,
+      },
     },
     (err, res) => {
       if (err) return console.log('The API returned an error: ' + err);
       if (callback && typeof callback === 'function') {
-        return callback(res.data.values);
+        return callback(res.config.data);
       }
-      console.log(res.data.values);
+      console.log(res.status);
+      console.log(res.statusText);
+      console.log(res.config.data);
     },
   );
 }
 
-module.exports = (id, range, callback) => fs.readFile(
+module.exports = (id, range, values, callback) => fs.readFile(
   // Load client secrets from a local file.
   'credentials.json',
   (err, content) => {
@@ -37,7 +39,7 @@ module.exports = (id, range, callback) => fs.readFile(
     // Authorize a client with credentials, then call the Google Sheets API.
     authorize(
       JSON.parse(content),
-      oAuthInstance => listValues(oAuthInstance, id, range, callback),
+      oAuthInstance => insertValues(oAuthInstance, id, range, values, callback),
     );
   },
 );
