@@ -1,0 +1,38 @@
+{
+  "name": "oab",
+  "version": "1.0.0-alpha.0",
+  "description": "Open Accountability Bot Prototype",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "botkit": "^0.7.0",
+    "botkit-storage-mongo": "^1.0.6",
+    "cookie-parser": "^1.4.3",
+    "debug": "^2.3.3",
+    "express": "^4.14.0",
+    "express-hbs": "^1.0.4",
+    "node-env-file": "^0.1.8",
+    "querystring": "^0.2.0",
+    "request": "^2.79.0",
+    "wordfilter": "^0.2.6"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rdig/oab.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rdig/oab/issues"
+  },
+  "homepage": "https://github.com/rdig/oab",
+  "keywords": [
+    "bots",
+    "accountability",
+    "slack"
+  ],
+  "author": "Raul Glogovetan <raul@glogovetan.com>",
+  "license": "MIT"
+}

@@ -1,2 +1,7 @@
 # oab
-Open Accountability Bot
+
+Open Accountability Bot Prototype
+
+## Getting started
+
+Just run `yarn start`
