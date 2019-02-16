@@ -4,7 +4,8 @@
   "description": "Open Accountability Bot Prototype",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node bot.js",
+    "start:tunnel": "lt --port 8765 --subdomain oab-proto"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
