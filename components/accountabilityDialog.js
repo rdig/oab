@@ -21,27 +21,66 @@ module.exports = oab => oab
         value:'anon',
       },
     ],
+    /*
+     * Default
+     */
+    { value: 'you' }
   )
   /*
    * Subject (User)
    */
-  // .addSelect(
-  //   'User',
-  //   'accountableUser',
-  //   'users',
-  // );
+  .addSelect(
+    'User',
+    'accountableUser',
+    null,
+    null,
+    /*
+     * Slack provides us with a list of users. Neat!
+     */
+    { data_source: 'users' },
+  )
   /*
    * Reason
    */
   .addText(
     'Reason',
     'reason',
-  );
+  )
   /*
    * Rating
    */
-  // .addSelect()
+  .addSelect(
+    'Rating',
+    'rating',
+    null,
+    [
+      {
+        label:'Best',
+        value:'5',
+      },
+      {
+        label:'Good',
+        value:'1',
+      },
+      {
+        label:'Bad',
+        value:'-1',
+      },
+      {
+        label:'Worst',
+        value:'-5',
+      },
+    ],
+  )
   /*
    * Notes
    */
-  // .addTextArea();
+  .addTextarea(
+    'Additional Notes',
+    'notes',
+    null,
+    {
+      placeholder: 'Optional explanation for your reasoning',
+      optional: true,
+    }
+  );
