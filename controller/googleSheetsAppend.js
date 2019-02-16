@@ -1,7 +1,7 @@
+require('node-env-file')('.env');
 const fs = require('fs');
 const { google } = require('googleapis');
 const authorize = require('./googleAuthorize');
-const env = require('node-env-file')('.env');
 
 function insertValues(auth, range, values, callback) {
   const sheets = google.sheets({

@@ -40,13 +40,6 @@ module.exports = oab => oab
     { data_source: 'users' },
   )
   /*
-   * Reason
-   */
-  .addText(
-    'Reason',
-    'reason',
-  )
-  /*
    * Rating
    */
   .addSelect(
@@ -71,6 +64,13 @@ module.exports = oab => oab
         value:'-5',
       },
     ],
+  )
+  /*
+   * Reason
+   */
+  .addText(
+    'Reason',
+    'reason',
   )
   /*
    * Notes

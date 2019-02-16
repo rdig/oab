@@ -1,7 +1,8 @@
 const appendSheet = require('./googleSheetsAppend');
 const util = require('util');
+const sendWebHook = require('./sendWebHook');
 
-module.exports = async (oab, event, debug = false) => {
+module.exports = async (oab, event, controller, debug = false) => {
   const { reason, rating, notes } = event.submission;
   const { user: currentUserId } = event;
   /*
@@ -21,7 +22,7 @@ module.exports = async (oab, event, debug = false) => {
   const userOrAnon = event.submission.userOrAnon === 'you' ?
     `${currentUser.real_name} (@${currentUser.name})`
     : 'Anonymous';
-  return appendSheet(
+  appendSheet(
     'A2:E',
     [
       [
@@ -33,5 +34,16 @@ module.exports = async (oab, event, debug = false) => {
       ],
     ],
     debug ? console.log : () => null,
+  );
+  /*
+   * Post a notification to the pre-selected channel
+   */
+  sendWebHook(
+    controller,
+    event.submission.userOrAnon === 'you' ? currentUser.real_name : 'Anonymous',
+    accountableUser.real_name,
+    reason,
+    rating,
+    notes
   );
 };
