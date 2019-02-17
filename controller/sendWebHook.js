@@ -17,7 +17,7 @@ module.exports = (controller, userOrAnon, accountableUser, reason, rating, notes
   };
 
   const colorsList = {
-    '5': '#53f442',
+    '5': '#19a582',
     '1': '#1571ab',
     '-1': '#1571ab',
     '-5': '#e51919',
@@ -59,7 +59,7 @@ module.exports = (controller, userOrAnon, accountableUser, reason, rating, notes
     attachments: [
       {
         title: 'Accountability Submissions',
-        title_link: 'https://docs.google.com/spreadsheets/d/1BxL0eHcHJTVgJCKn3YXMNBPaQCWuJcmbS0PeTEyD-1k',
+        title_link: `https://docs.google.com/spreadsheets/d/${process.env.spreadSheetId}`,
         text: `${userOrAnon === 'Anonymous' ? 'Someone' : userOrAnon} submitted a new accountability rating`,
         color: colorsList[rating],
         fields,
