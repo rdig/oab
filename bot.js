@@ -1,10 +1,7 @@
-var env = require('node-env-file');
-env(__dirname + '/.env');
-
+require('node-env-file')('/.env');
 
 if (!process.env.clientId || !process.env.clientSecret || !process.env.PORT) {
   usage_tip();
-  // process.exit(1);
 }
 
 var Botkit = require('botkit');
@@ -23,10 +20,10 @@ var bot_options = {
 // Use a mongo database if specified, otherwise store in a JSON file local to the app.
 // Mongo is automatically configured when deploying to Heroku
 if (process.env.MONGO_URI) {
-    var mongoStorage = require('botkit-storage-mongo')({mongoUri: process.env.MONGO_URI});
-    bot_options.storage = mongoStorage;
+  var mongoStorage = require('botkit-storage-mongo')({mongoUri: process.env.MONGO_URI});
+  bot_options.storage = mongoStorage;
 } else {
-    bot_options.json_file_store = __dirname + '/.data/db/'; // store user data in a simple JSON format
+  bot_options.json_file_store = __dirname + '/.data/db/'; // store user data in a simple JSON format
 }
 
 // Create the Botkit controller, which controls all instances of the bot.
@@ -39,9 +36,6 @@ var webserver = require(__dirname + '/components/express_webserver.js')(controll
 
 if (!process.env.clientId || !process.env.clientSecret) {
 
-  // Load in some helpers that make running Botkit on Glitch.com better
-  require(__dirname + '/components/plugin_glitch.js')(controller);
-
   webserver.get('/', function(req, res){
     res.render('installation', {
       domain: req.get('host'),
@@ -53,7 +47,8 @@ if (!process.env.clientId || !process.env.clientSecret) {
 
   var where_its_at = 'http://' + (process.env.PROJECT_DOMAIN ? process.env.PROJECT_DOMAIN+ '.glitch.me/' : 'localhost:' + process.env.PORT || 3000);
   console.log('WARNING: This application is not fully configured to work with Slack. Please see instructions at ' + where_its_at);
-}else {
+
+} else {
 
   webserver.get('/', function(req, res){
     res.render('index', {
@@ -77,17 +72,6 @@ if (!process.env.clientId || !process.env.clientSecret) {
    * Handle dialog submission
    */
   require(__dirname + '/controller/dialogSubmissions.js')(controller);
-
-  // Send an onboarding message when a new team joins
-  // require(__dirname + '/components/onboarding.js')(controller);
-
-  // Load in some helpers that make running Botkit on Glitch.com better
-  // require(__dirname + '/components/plugin_glitch.js')(controller);
-
-  // var normalizedPath = require("path").join(__dirname, "skills");
-  // require("fs").readdirSync(normalizedPath).forEach(function(file) {
-  //   require("./skills/" + file)(controller);
-  // });
 }
 
 function usage_tip() {
