@@ -1,4 +1,4 @@
-require('node-env-file')('/.env');
+require('node-env-file')('.env');
 
 if (!process.env.clientId || !process.env.clientSecret || !process.env.PORT) {
   usage_tip();
@@ -11,7 +11,7 @@ var bot_options = {
     clientId: process.env.clientId,
     clientSecret: process.env.clientSecret,
     clientSigningSecret: process.env.clientSigningSecret,
-    debug: true,
+    debug: process.env.DEBUG,
     scopes: ['bot'],
     studio_token: process.env.studio_token,
     studio_command_uri: process.env.studio_command_uri

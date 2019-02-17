@@ -1,8 +1,9 @@
+require('node-env-file')('.env');
 const appendSheet = require('./googleSheetsAppend');
 const util = require('util');
 const sendWebHook = require('./sendWebHook');
 
-module.exports = async (oab, event, controller, debug = false) => {
+module.exports = async (oab, event, controller, debug = process.env.DEBUG || false) => {
   const { reason, rating, notes } = event.submission;
   const { user: currentUserId } = event;
   /*
