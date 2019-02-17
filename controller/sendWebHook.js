@@ -1,6 +1,6 @@
 require('node-env-file')('.env');
 const util = require('util');
-const { description, version } = require('../package.json');
+const { name, description, version, homepage } = require('../package.json');
 
 module.exports = (controller, userOrAnon, accountableUser, reason, rating, notes) => {
   const oab = controller.spawn({
@@ -56,14 +56,18 @@ module.exports = (controller, userOrAnon, accountableUser, reason, rating, notes
 
   util.promisify(oab.sendWebhook)({
     username: 'oab-webhook',
+    icon_url: 'https://raw.githubusercontent.com/rdig/oab/master/public/oab-logo-geometric_512.png',
     attachments: [
       {
+        author_name: `@${name}`,
+        author_link: homepage,
         title: 'Accountability Submissions',
         title_link: `https://docs.google.com/spreadsheets/d/${process.env.spreadSheetId}`,
         text: `${userOrAnon === 'Anonymous' ? 'Someone' : userOrAnon} submitted a new accountability rating`,
         color: colorsList[rating],
         fields,
         footer: `${description}, version: ${version}`,
+        footer_icon: 'https://raw.githubusercontent.com/rdig/oab/master/public/oab-logo-geometric_128.png',
         ts: Math.floor(Date.now() / 1000)
       },
     ],
