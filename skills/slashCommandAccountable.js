@@ -16,7 +16,7 @@ module.exports = controller => {
        * (these need to be delayed since it's going to take a while to get them)
        */
       case 'stats': {
-        return showStats(oab, event);
+        return showStats(controller, oab, event);
       }
       /*
        * @NOTE Show private usage instructions
