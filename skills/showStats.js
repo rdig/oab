@@ -1,6 +1,7 @@
 require('node-env-file')('.env');
 const readSheet = require('../controller/googleSheetsRead');
 const formatRatingData = require('../utils/formatRatingData');
+const formatRaterData = require('../utils/formatRaterData');
 
 module.exports = async (oab, event) => {
   try {
@@ -8,13 +9,26 @@ module.exports = async (oab, event) => {
       'A2:E',
       values => {
         let ratingMessage = 'Open Accountability Rating Statistics\n\n';
-        ratingMessage += '*Best Rated:*\n\n'
-        formatRatingData(values).map(entry => {
-          ratingMessage += `${entry[2]}. ${entry[0]}, Score: _${entry[1]}_\n`;
-        });
-        ratingMessage += `
+        const ratingValues = formatRatingData(values);
+        if (ratingValues.length) {
+          ratingMessage += '*Best Rated:*\n\n'
+          ratingValues.map(entry => {
+            ratingMessage += `${entry[2]}. ${entry[0]}, Score: _${entry[1]}_\n`;
+          });
+          ratingMessage += `
+*Top Rater:*
+
+`;
+          formatRaterData(values).map(entry => {
+            ratingMessage += `${entry[2]}. ${entry[0]}, Submissions: _${entry[1]}_\n`;
+          });
+          ratingMessage += `
 _All stat data is taken from:_ https://docs.google.com/spreadsheets/d/${process.env.spreadSheetId}
 `
+        } else {
+          ratingMessage +=
+            '_*Notice* No rating data available yet. Add new submissions before invoking the `stats` script._';
+        }
         return oab.replyPublicDelayed(event, ratingMessage);
       },
     );
