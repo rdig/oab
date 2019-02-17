@@ -1,4 +1,5 @@
 const accountabilityDialog = require('../components/accountabilityDialog');
+const showHelp = require('./showHelp');
 
 module.exports = controller => {
   controller.on('slash_command', (oab, event) => {
@@ -20,7 +21,7 @@ module.exports = controller => {
        * @NOTE Show private usage instructions
        */
       case 'help': {
-        return oab.replyPrivateDelayed(event, 'We show a reply privately');
+        return showHelp(oab, event);
       }
       /*
        * @NOTE For everything else, we open the rating dilaog
