@@ -1,5 +1,6 @@
 const accountabilityDialog = require('../components/accountabilityDialog');
 const showHelp = require('./showHelp');
+const showStats = require('./showStats');
 
 module.exports = controller => {
   controller.on('slash_command', (oab, event) => {
@@ -15,7 +16,7 @@ module.exports = controller => {
        * (these need to be delayed since it's going to take a while to get them)
        */
       case 'stats': {
-        return oab.replyPublicDelayed(event, 'We list the stats publicly');
+        return showStats(oab, event);
       }
       /*
        * @NOTE Show private usage instructions
