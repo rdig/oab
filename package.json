@@ -1,7 +1,7 @@
 {
   "name": "oab",
   "version": "1.0.0-alpha.0",
-  "description": "Open Accountability Bot Prototype",
+  "description": "Open Accountability Bot",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js",

@@ -2,13 +2,16 @@ require('node-env-file')('.env');
 const readSheet = require('../controller/googleSheetsRead');
 const formatRatingData = require('../utils/formatRatingData');
 const formatRaterData = require('../utils/formatRaterData');
+const { description } = require('../package.json');
 
 module.exports = async (oab, event) => {
   try {
     return readSheet(
       'A2:E',
       values => {
-        let ratingMessage = 'Open Accountability Rating Statistics\n\n';
+        let ratingMessage = `_${description}_ Rating Statistics
+
+`;
         const ratingValues = formatRatingData(values);
         if (ratingValues.length) {
           ratingMessage += '*Best Rated:*\n\n'

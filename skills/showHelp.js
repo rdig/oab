@@ -1,11 +1,13 @@
+const { description, version } = require('../package.json');
+
 module.exports = (oab, event) => {
-  const helpMessage = `Open Accountability Bot basic usage:
+  const helpMessage = `_${description}_ basic usage:
 
-- ${'`help`'} Displays this usage message
-- ${'`stats`'} Displays the ratings leaderboard
-- ${'`submit`, `rate` or empty'} Opens the submissions dialog
+${'`/accountable help`'} - Displays this usage message
+${'`/accountable stats`'} - Displays the ratings leaderboard
+${'`/accountable submit`, `/accountable rate` or `/accountable`'} - Opens the submissions dialog
 
-Version: v0.0.0-alpha.0
+_Version: ${version}_
 More info: https://github.com/rdig/oab`;
   return oab.replyPrivateDelayed(event, helpMessage);
 };

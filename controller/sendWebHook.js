@@ -1,5 +1,6 @@
 require('node-env-file')('.env');
 const util = require('util');
+const { description, version } = require('../package.json');
 
 module.exports = (controller, userOrAnon, accountableUser, reason, rating, notes) => {
   const oab = controller.spawn({
@@ -62,7 +63,7 @@ module.exports = (controller, userOrAnon, accountableUser, reason, rating, notes
         text: `${userOrAnon === 'Anonymous' ? 'Someone' : userOrAnon} submitted a new accountability rating`,
         color: colorsList[rating],
         fields,
-        footer: "Open Accountability Bot",
+        footer: `${description}, version: ${version}`,
         ts: Math.floor(Date.now() / 1000)
       },
     ],
