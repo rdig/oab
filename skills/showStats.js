@@ -9,8 +9,8 @@ module.exports = async (oab, event) => {
       values => {
         let ratingMessage = 'Open Accountability Rating Statistics\n\n';
         ratingMessage += '*Best Rated:*\n\n'
-        formatRatingData(values).map((entry, index) => {
-          ratingMessage += `${index + 1}. ${entry[0]}, Score: _${entry[1]}_\n`;
+        formatRatingData(values).map(entry => {
+          ratingMessage += `${entry[2]}. ${entry[0]}, Score: _${entry[1]}_\n`;
         });
         ratingMessage += `
 _All stat data is taken from:_ https://docs.google.com/spreadsheets/d/${process.env.spreadSheetId}

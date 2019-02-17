@@ -25,5 +25,13 @@ module.exports = values => {
         return 0;
       }
       return 1;
+    })
+    .map((entry, index, ratings) => {
+      let place = ratings[index - 1] ? ratings[index - 1][2] + 1 : index + 1;
+      if (ratings[index - 1] && ratings[index - 1][1] === entry[1]) {
+        place = ratings[index - 1][2];
+      }
+      entry.push(place);
+      return entry;
     });
 };
