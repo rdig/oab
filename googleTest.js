@@ -1,4 +1,4 @@
-const readSheet = require('./controller/googleSheetsRead');
+const readSheet = require('./lib/googleSheetsRead');
 
 readSheet(
   'A2:E',

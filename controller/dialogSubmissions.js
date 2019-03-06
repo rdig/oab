@@ -1,5 +1,5 @@
 require('node-env-file')('.env');
-const saveDialogToSheets = require('./saveDialogToSheets');
+const saveDialogToSheets = require('../lib/saveDialogToSheets');
 
 module.exports = async controller => {
   controller.middleware.receive.use((oab, event, next) => {
@@ -16,12 +16,8 @@ module.exports = async controller => {
   controller.on(
     'dialog_submission',
     async (oab, event) => {
-      oab.whisper(
-        event,
-        `Submission Successful! You can check all the other submissions here: https://docs.google.com/spreadsheets/d/${process.env.spreadSheetId}`
-      );
       try {
-        saveDialogToSheets(oab, event, controller);
+        // saveDialogToSheets(oab, event, controller);
         /*
          * @NOTE Call dialogOk or else Slack will think this is an error
          */
@@ -29,6 +25,37 @@ module.exports = async controller => {
       } catch (error) {
         oab.dialogError('Could not post your submission to the Spreadsheet');
       }
+      oab.replyInteractive(event, {
+          text: '...',
+          attachments: [
+              {
+                  title: 'My buttons',
+                  callback_id: '123',
+                  attachment_type: 'default',
+                  actions: [
+                      {
+                          "name":"yes",
+                          "text": "Yes!",
+                          "value": "yes",
+                          "type": "button",
+                      },
+                      {
+                         "text": "No!",
+                          "name": "no",
+                          "value": "delete",
+                          "style": "danger",
+                          "type": "button",
+                          "confirm": {
+                            "title": "Are you sure?",
+                            "text": "This will do something!",
+                            "ok_text": "Yes",
+                            "dismiss_text": "No"
+                          }
+                      }
+                  ]
+              }
+          ]
+      });
     },
   );
 };
