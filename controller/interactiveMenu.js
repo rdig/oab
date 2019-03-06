@@ -39,13 +39,13 @@ module.exports = controller => {
           event.user,
           (err, user_data) => {
             if (user_data) {
-              const { userOrAnon, accountableUser, reason, rating, notes } = user_data;
+              const { raterUser, accountableUser, reason, rating, notes } = user_data;
               /*
                * Post a notification to the pre-selected channel
                */
               return sendWebHookRating(
                 controller,
-                userOrAnon,
+                raterUser,
                 accountableUser,
                 reason,
                 rating,

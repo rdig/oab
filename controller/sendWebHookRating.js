@@ -2,7 +2,7 @@ require('node-env-file')('.env');
 const util = require('util');
 const { name, description, version, homepage } = require('../package.json');
 
-module.exports = (controller, userOrAnon, accountableUser, reason, rating, notes) => {
+module.exports = (controller, raterUser, accountableUser, reason, rating, notes) => {
   const oab = controller.spawn({
     incoming_webhook: {
       url: process.env.webHookUrl,
@@ -26,7 +26,7 @@ module.exports = (controller, userOrAnon, accountableUser, reason, rating, notes
   const fields = [
       {
         title: 'Submitter',
-        value: userOrAnon,
+        value: raterUser,
         short: true
       },
       {
@@ -63,7 +63,7 @@ module.exports = (controller, userOrAnon, accountableUser, reason, rating, notes
         author_link: homepage,
         title: 'Accountability Submissions',
         title_link: `https://docs.google.com/spreadsheets/d/${process.env.spreadSheetId}`,
-        text: `${userOrAnon === 'Anonymous' ? 'Someone' : userOrAnon} submitted a new accountability rating`,
+        text: `${raterUser} submitted a new accountability rating`,
         color: colorsList[rating],
         fields,
         footer: `${description}, version: ${version}`,

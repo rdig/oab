@@ -5,28 +5,6 @@ module.exports = oab => oab
     'Submit',
   )
   /*
-   * Yourself v. Anonymous
-   */
-  .addSelect(
-    'Submit As',
-    'userOrAnon',
-    null,
-    [
-      {
-        label:'Yourself',
-        value:'you',
-      },
-      {
-        label:'Anonymous',
-        value:'anon',
-      },
-    ],
-    /*
-     * Default
-     */
-    { value: 'you' }
-  )
-  /*
    * Subject (User)
    */
   .addSelect(
