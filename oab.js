@@ -72,6 +72,11 @@ if (!process.env.clientId || !process.env.clientSecret) {
    * Handle dialog submission
    */
   require(__dirname + '/controller/dialogSubmissions.js')(controller);
+
+  /*
+   * Handle the submission interactive menu
+   */
+  require(__dirname + '/controller/interactiveMenu.js')(controller);
 }
 
 function usage_tip() {
