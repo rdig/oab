@@ -26,19 +26,11 @@ module.exports = oab => oab
     null,
     [
       {
-        label:'Best',
+        label:'Positive',
         value:'5',
       },
       {
-        label:'Good',
-        value:'1',
-      },
-      {
-        label:'Bad',
-        value:'-1',
-      },
-      {
-        label:'Worst',
+        label:'Negative',
         value:'-5',
       },
     ],

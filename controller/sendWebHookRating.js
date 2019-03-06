@@ -10,16 +10,12 @@ module.exports = (controller, raterUser, accountableUser, reason, rating, notes)
   });
 
   const ratingsList = {
-    '5': 'Best',
-    '1': 'Good',
-    '-1': 'Bad',
-    '-5': 'Worst',
+    '5': 'Positive',
+    '-5': 'Negative',
   };
 
   const colorsList = {
     '5': '#19a582',
-    '1': '#1571ab',
-    '-1': '#1571ab',
     '-5': '#e51919',
   };
 
