@@ -58,9 +58,13 @@ module.exports = values => {
       return 1;
     })
     .map((entry, index, ratings) => {
-      let place = ratings[index - 1] ? ratings[index - 1][4] + 1 : index + 1;
-      if (ratings[index - 1] && ratings[index - 1][1] === entry[1]) {
-        place = ratings[index - 1][4];
+      const previousRatingEntry = ratings[index - 1];
+      const previousPlace = previousRatingEntry ? previousRatingEntry[4] : 0;
+      const previousCount = previousRatingEntry ? previousRatingEntry[1] : 0;
+      const currentCount = entry[1];
+      let place = previousRatingEntry ? previousPlace + 1 : index + 1;
+      if (previousRatingEntry && previousCount === currentCount) {
+        place = previousPlace;
       }
       entry.push(place);
       return entry;
