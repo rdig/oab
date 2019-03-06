@@ -2,9 +2,9 @@
   "name": "oab",
   "version": "1.0.0-alpha.0",
   "description": "Open Accountability Bot",
-  "main": "bot.js",
+  "main": "oab.js",
   "scripts": {
-    "start": "node bot.js",
+    "start": "node oab.js",
     "tunnel": "sh scripts/localtunnel.sh"
   },
   "dependencies": {
