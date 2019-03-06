@@ -4,7 +4,8 @@
   "description": "Open Accountability Bot",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node bot.js",
+    "tunnel": "sh scripts/localtunnel.sh"
   },
   "dependencies": {
     "body-parser": "^1.15.2",

@@ -11,3 +11,9 @@ This was cobble together in the span of a couple of hours during a weekend, so t
 ### Getting started
 
 Just run `yarn start`
+
+#### Starting a local development tunnel
+
+Run `yarn tunnel <your-subdomain>`.
+
+This will generate a local tunnel in the form of `<your-subdomain>.localtunnel.me` which you can plug into [your Slack bot's](https://api.slack.com/apps) request URL.
