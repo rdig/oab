@@ -1,6 +1,6 @@
 const accountabilityDialog = require('../components/accountabilityDialog');
-const showHelp = require('./showHelp');
-const showStats = require('./showStats');
+const showHelp = require('../skills/showHelp');
+const showStats = require('../skills/showStats');
 
 module.exports = controller => {
   controller.on('slash_command', (oab, event) => {

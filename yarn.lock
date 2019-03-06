@@ -2,26 +2,26 @@
 # yarn lockfile v1
 
 
-"@ciscospark/common-evented@1.47.3":
-  version "1.47.3"
-  resolved "https://registry.yarnpkg.com/@ciscospark/common-evented/-/common-evented-1.47.3.tgz#ee04d3bb421f928f6f2f0ca129ad478e61c30b1e"
-  integrity sha512-/moLHhoKXPj7OzGtG9GfwXb5pCPMM8qwmQlIgsEtVsEMqoNgE9iMI31pmQr7ZZUq2pm6RgFxtXYEjVck54sEYA==
+"@ciscospark/common-evented@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/common-evented/-/common-evented-1.49.3.tgz#0e21bec54b846cefb428130cf72939f01c23ff0c"
+  integrity sha512-Nq+9iT0UiiBofuAbUr0Kb3MV0i4ozP3Uy5P89ypF/DX5Wa0TcCcko3RgOlBsEbcRCr2CKL9eYlrkM1Ktu9fdPA==
   dependencies:
-    "@ciscospark/common" "1.47.3"
+    "@ciscospark/common" "1.49.3"
     babel-runtime "^6.23.0"
     envify "^4.1.0"
 
-"@ciscospark/common-timers@1.47.1":
-  version "1.47.1"
-  resolved "https://registry.yarnpkg.com/@ciscospark/common-timers/-/common-timers-1.47.1.tgz#84e7b6e3338cea87f7e237c01951f2242f0a2d58"
-  integrity sha512-cjSbLseP1gE/ND/6STHM8SEKyw9Eu9JfCoZeRwqvtrPzFraZilOBGECCPMFAjDmPkJSn1jpcqxWNu7ZI8VF4IQ==
+"@ciscospark/common-timers@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/common-timers/-/common-timers-1.49.3.tgz#57c39fb9cfde20ec8fa98a6caf71d85865929862"
+  integrity sha512-OPMEn0uuBzLHyCp7o5uq9Vr4QNov6BHEsVktaJ/U7WddnNfdvcx/kzrA9xgQDEtXdTEhFQ3KA41AfYeuANt9+g==
   dependencies:
     envify "^4.1.0"
 
-"@ciscospark/common@1.47.3":
-  version "1.47.3"
-  resolved "https://registry.yarnpkg.com/@ciscospark/common/-/common-1.47.3.tgz#a38aa96d99f42210f6d1a31a17d941014fba7303"
-  integrity sha512-0sk0IEd2wbg+tV+s07PttOUI+Za4rV9fWOW0PhVsDJgopSOoKnidI+FtWGWxwc2alQc+FIXEeHM/BHGlzYXHsg==
+"@ciscospark/common@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/common/-/common-1.49.3.tgz#860920099917e91dba59468532225b6d3a5324b6"
+  integrity sha512-2UglFHC4RZinL6SIQSZy+JOTRGylk/zU6iESQGsCgZS3Vn9wrPNUWAqXw00KIldGkTd0q3WFEbO5mZlBpHOyKg==
   dependencies:
     babel-runtime "^6.23.0"
     backoff "^2.5.0"
@@ -30,12 +30,12 @@
     lodash "^4.17.4"
     urlsafe-base64 "^1.0.0"
 
-"@ciscospark/http-core@1.47.3":
-  version "1.47.3"
-  resolved "https://registry.yarnpkg.com/@ciscospark/http-core/-/http-core-1.47.3.tgz#287e02c4fb1ea6182368fb12add3a50a2b4649ef"
-  integrity sha512-cPXWvcHdRN0AEqPsq4nHV6ufYD4JmdP32Jyg7fTyLc9FPYk7D+zabrkLRNRdOLbinaES6NgIYeK5efYPczOM0Q==
+"@ciscospark/http-core@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/http-core/-/http-core-1.49.3.tgz#97aa9fa499cd4fc0b77f0469d5747e5b5bfa9f18"
+  integrity sha512-wl3BykB4xX3vfJbnzvEl8iklTn3zXOjTyKqgkZwaOFLSg3L+7xQnns+CpL7TvQoIzl7BBB0L1c3mKWsMqVYQhw==
   dependencies:
-    "@ciscospark/common" "1.47.3"
+    "@ciscospark/common" "1.49.3"
     babel-runtime "^6.23.0"
     envify "^4.1.0"
     file-type "^3.9.0"
@@ -47,40 +47,40 @@
     request "^2.81.0"
     xtend "^4.0.1"
 
-"@ciscospark/internal-plugin-feature@1.47.3":
-  version "1.47.3"
-  resolved "https://registry.yarnpkg.com/@ciscospark/internal-plugin-feature/-/internal-plugin-feature-1.47.3.tgz#69aff45b6c1718e003fbf6966370c962993ca3f7"
-  integrity sha512-+KJvpJP2kFK7AdWBcyUYgTJa7OC/Y0MotVPhY6ezZy0UVtHQPna8+muO80JaOgYL1SSFPANSGJB62OnxMl3kQg==
+"@ciscospark/internal-plugin-feature@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/internal-plugin-feature/-/internal-plugin-feature-1.49.3.tgz#305e0d7018d2ca520c9688b6f7973aa97482f8d0"
+  integrity sha512-S9JObkFNE1UrwXox1+XixenMzSe3IZRkN+4jA5dpB+Og/Qd4iyTvnr/A0nONe/mL++2XsEaaIEMgg0oErcMdfw==
   dependencies:
-    "@ciscospark/internal-plugin-wdm" "1.47.3"
-    "@ciscospark/spark-core" "1.47.3"
+    "@ciscospark/internal-plugin-wdm" "1.49.3"
+    "@ciscospark/spark-core" "1.49.3"
     babel-runtime "^6.23.0"
     envify "^4.1.0"
     lodash "^4.17.4"
 
-"@ciscospark/internal-plugin-locus@1.47.3":
-  version "1.47.3"
-  resolved "https://registry.yarnpkg.com/@ciscospark/internal-plugin-locus/-/internal-plugin-locus-1.47.3.tgz#926176c7c4c2abdf77208877ff973c2aac36f0ff"
-  integrity sha512-7CqFIASyAEVnutACivL51hOuaQnrEvbhWKt02WWzodk0lFsKBsH0KXn7EQ1cvtf/fLV4V15XuU0wCvWkQV9C5Q==
+"@ciscospark/internal-plugin-locus@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/internal-plugin-locus/-/internal-plugin-locus-1.49.3.tgz#b431200c2e9f4466c11e4bf0948b2f65d08190f5"
+  integrity sha512-dpvIC0nA7+deVqeuyCyjcw7GcL/N4zmu33z6b4AqsAuPmLjgIYazo2YhVvhpXb1OLjF073FTVXtkKUVIpAG1fw==
   dependencies:
-    "@ciscospark/internal-plugin-mercury" "1.47.3"
-    "@ciscospark/spark-core" "1.47.3"
+    "@ciscospark/internal-plugin-mercury" "1.49.3"
+    "@ciscospark/spark-core" "1.49.3"
     babel-runtime "^6.23.0"
     envify "^4.1.0"
     lodash "^4.17.4"
     uuid "^3.2.1"
 
-"@ciscospark/internal-plugin-mercury@1.47.3":
-  version "1.47.3"
-  resolved "https://registry.yarnpkg.com/@ciscospark/internal-plugin-mercury/-/internal-plugin-mercury-1.47.3.tgz#9f133fdee609bd5f94814a522e827dfeecc0d3c6"
-  integrity sha512-6Y2nK1am1wXYVJ4Cib+wvH/s1P8QixffnWH5jn06oFId0uDiSW97MH5omAyMg3RwG6hfWyhOmi1WmmMd2CCWTg==
+"@ciscospark/internal-plugin-mercury@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/internal-plugin-mercury/-/internal-plugin-mercury-1.49.3.tgz#1878f60fe358c7d7b940b0470ad35725d38cd3d1"
+  integrity sha512-HKglAX6wAU9XeL85OoBGYAQVF5juSKCoafNVjVw0G9EBuOYBN7f4Y139l6feNnJbaplvIy67bSp+5+WwdfEuOw==
   dependencies:
-    "@ciscospark/common" "1.47.3"
-    "@ciscospark/common-timers" "1.47.1"
-    "@ciscospark/internal-plugin-feature" "1.47.3"
-    "@ciscospark/internal-plugin-metrics" "1.47.3"
-    "@ciscospark/internal-plugin-wdm" "1.47.3"
-    "@ciscospark/spark-core" "1.47.3"
+    "@ciscospark/common" "1.49.3"
+    "@ciscospark/common-timers" "1.49.3"
+    "@ciscospark/internal-plugin-feature" "1.49.3"
+    "@ciscospark/internal-plugin-metrics" "1.49.3"
+    "@ciscospark/internal-plugin-wdm" "1.49.3"
+    "@ciscospark/spark-core" "1.49.3"
     babel-runtime "^6.23.0"
     backoff "^2.5.0"
     envify "^4.1.0"
@@ -88,40 +88,40 @@
     uuid "^3.2.1"
     ws "^4.0.0"
 
-"@ciscospark/internal-plugin-metrics@1.47.3":
-  version "1.47.3"
-  resolved "https://registry.yarnpkg.com/@ciscospark/internal-plugin-metrics/-/internal-plugin-metrics-1.47.3.tgz#538a67e04a3da6678aadfc6f2e65b44b74589694"
-  integrity sha512-7sxm0orRL2+P4NcFUqiClbCdQ/ou/YqvlXrkN1hvPm7lofovGBvEamL93dZcDTxfMVr7GrDaA6w2mruz3QUsSw==
+"@ciscospark/internal-plugin-metrics@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/internal-plugin-metrics/-/internal-plugin-metrics-1.49.3.tgz#d9d31762f5eb04219d5759cb4ff9466328dc407e"
+  integrity sha512-iBe3ZvDTveYFnmMzga2/NPeRSQslJb5i71obr/noUlhRo6tdUXTQBlJ+hrwPnOxpNY7oA80YXDaku0X6GB5phg==
   dependencies:
-    "@ciscospark/common" "1.47.3"
-    "@ciscospark/common-timers" "1.47.1"
-    "@ciscospark/internal-plugin-wdm" "1.47.3"
-    "@ciscospark/spark-core" "1.47.3"
+    "@ciscospark/common" "1.49.3"
+    "@ciscospark/common-timers" "1.49.3"
+    "@ciscospark/internal-plugin-wdm" "1.49.3"
+    "@ciscospark/spark-core" "1.49.3"
     babel-runtime "^6.23.0"
     envify "^4.1.0"
 
-"@ciscospark/internal-plugin-wdm@1.47.3":
-  version "1.47.3"
-  resolved "https://registry.yarnpkg.com/@ciscospark/internal-plugin-wdm/-/internal-plugin-wdm-1.47.3.tgz#84c3b8b035cac9f12ba322a1ea81ef3fd36e5b9e"
-  integrity sha512-aDEOmox+A5nfnFUhP4SfN81KXf/hq7sVSLUi8YB0Zy/kfQIlEj3SC/JwhqR4mnRQZdpA18DhKk4tEtj3pxVA3w==
+"@ciscospark/internal-plugin-wdm@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/internal-plugin-wdm/-/internal-plugin-wdm-1.49.3.tgz#33a5a49c76efdb7554827d347cdfaeb7bc4fc65b"
+  integrity sha512-5338PRuSvY4uxpu85Wc1cZeQzhjVwFcu17i3Qe7lBHeKzEQRvtKad1Kc/jFyPxdbS81uCFvWQoJ0pEJd6HFuOw==
   dependencies:
-    "@ciscospark/common" "1.47.3"
-    "@ciscospark/common-timers" "1.47.1"
-    "@ciscospark/http-core" "1.47.3"
-    "@ciscospark/spark-core" "1.47.3"
+    "@ciscospark/common" "1.49.3"
+    "@ciscospark/common-timers" "1.49.3"
+    "@ciscospark/http-core" "1.49.3"
+    "@ciscospark/spark-core" "1.49.3"
     ampersand-collection "^2.0.2"
     ampersand-state "^5.0.2"
     babel-runtime "^6.23.0"
     envify "^4.1.0"
     lodash "^4.17.4"
 
-"@ciscospark/media-engine-webrtc@1.47.3":
-  version "1.47.3"
-  resolved "https://registry.yarnpkg.com/@ciscospark/media-engine-webrtc/-/media-engine-webrtc-1.47.3.tgz#1e74ff05e6f2361ec422320a42e0b5ff2f608c1f"
-  integrity sha512-4el0hfZZpFR4fPKRgJhn9gYhJTW7wtJSEmr8e/9fV/pAgxIhDN+k2u6K2b3EgHtdKR/Ys6KHH4+dv9U/wI4afQ==
+"@ciscospark/media-engine-webrtc@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/media-engine-webrtc/-/media-engine-webrtc-1.49.3.tgz#25280e8418cf90685f4fe4657baaabd0515db3c0"
+  integrity sha512-NtwpvEh+P3Jrh9bgylTeMTFbQQ+9Ox43G/Ha7aUOQMCNSGySbm4wI01RrqmJidNl+fxFRu2iJ+iNG6R+lCKXfA==
   dependencies:
-    "@ciscospark/common" "1.47.3"
-    "@ciscospark/common-evented" "1.47.3"
+    "@ciscospark/common" "1.49.3"
+    "@ciscospark/common-evented" "1.49.3"
     ampersand-events "^2.0.2"
     babel-runtime "^6.23.0"
     bowser "^1.6.0"
@@ -132,90 +132,90 @@
     sdp-transform "^2.4.0"
     webrtc-adapter "^6.1.0"
 
-"@ciscospark/plugin-authorization-browser@1.47.3":
-  version "1.47.3"
-  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-authorization-browser/-/plugin-authorization-browser-1.47.3.tgz#d38499851844d05153e9c1d1b3b99e9c9487563c"
-  integrity sha512-RWqzHgRZ8oEirOhGl/3VJWi+owlzC6fTHEsPsNMqDbFeO5sCd3ErybIL7WliWENFoR+iT+hGkl0XZQGbaktUTg==
+"@ciscospark/plugin-authorization-browser@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-authorization-browser/-/plugin-authorization-browser-1.49.3.tgz#ee7e3ffeebdf95913bda9d5a116979a2a6bf056c"
+  integrity sha512-8AR3DL56o+5tCMoMuj3aqC0702ip7vzIMoRfgPV54HSVzljY3xpdpEdyElIN45U6UdTwvLGPS+I69MjUo5/98Q==
   dependencies:
-    "@ciscospark/common" "1.47.3"
-    "@ciscospark/internal-plugin-wdm" "1.47.3"
-    "@ciscospark/spark-core" "1.47.3"
+    "@ciscospark/common" "1.49.3"
+    "@ciscospark/internal-plugin-wdm" "1.49.3"
+    "@ciscospark/spark-core" "1.49.3"
     babel-runtime "^6.23.0"
     envify "^4.1.0"
     lodash "^4.17.4"
     uuid "^3.2.1"
 
-"@ciscospark/plugin-authorization-node@1.47.3":
-  version "1.47.3"
-  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-authorization-node/-/plugin-authorization-node-1.47.3.tgz#986d5d69fcf37277191d6ed7e200ef54c8e4e726"
-  integrity sha512-P5D7pAOGecB29s+pUQ14LIr3RbAHbo9faAPZnk2BlF+mST2HelKOqhFIyB2/ex3ymxTC9deTtG19zWdxu1EWKw==
+"@ciscospark/plugin-authorization-node@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-authorization-node/-/plugin-authorization-node-1.49.3.tgz#56b0a96bc436b25b102814bcb9d57d98603b0973"
+  integrity sha512-+LoniykLRiYq5rQOZ0HZcJWa2srcojc/bdfwJbm/zWykSWmLI94pIxpyKhahnqzEicoy/agGMh169gtymTICWw==
   dependencies:
-    "@ciscospark/common" "1.47.3"
-    "@ciscospark/internal-plugin-wdm" "1.47.3"
-    "@ciscospark/spark-core" "1.47.3"
+    "@ciscospark/common" "1.49.3"
+    "@ciscospark/internal-plugin-wdm" "1.49.3"
+    "@ciscospark/spark-core" "1.49.3"
     babel-runtime "^6.23.0"
     envify "^4.1.0"
 
-"@ciscospark/plugin-authorization@1.47.3":
-  version "1.47.3"
-  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-authorization/-/plugin-authorization-1.47.3.tgz#cded983f0e4dc2ae6bb150c7611a00b211505f63"
-  integrity sha512-c86WxLLPIvJOac5v0mupqeenfDvA89Wms7ZHUnuSxA/d+4O6q6+WEelwiPz1y6D/sri641b/OoADSYBrATg8Tw==
+"@ciscospark/plugin-authorization@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-authorization/-/plugin-authorization-1.49.3.tgz#36e091b1e46c3ac09e1e1a9f09e368a2e2f11cae"
+  integrity sha512-GN/0mpecnAZfSb5NV81YXzgHqM+IOmwYYn6aOlazpG6AHRFm5U3Nm5FI9EF8XbFzFv7ECIGxDf/BsmH0PbgDrA==
   dependencies:
-    "@ciscospark/plugin-authorization-browser" "1.47.3"
-    "@ciscospark/plugin-authorization-node" "1.47.3"
+    "@ciscospark/plugin-authorization-browser" "1.49.3"
+    "@ciscospark/plugin-authorization-node" "1.49.3"
     envify "^4.1.0"
 
-"@ciscospark/plugin-logger@1.47.3":
-  version "1.47.3"
-  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-logger/-/plugin-logger-1.47.3.tgz#574c0389d8cb322ee9a1e9c7302076508cea9002"
-  integrity sha512-ummDUdnHw22pFhnFSwR7X3EQpQyIEQ0m1IDDRoll6z6mLxFLwZJJX2cm28AlN3YomRcrg+zAe2fu5IiBNaqGtA==
+"@ciscospark/plugin-logger@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-logger/-/plugin-logger-1.49.3.tgz#4b50fe5227a6cc98d7c30aab29104b2f75bc4d25"
+  integrity sha512-zpqHm7a30bbX6iCm1qjajg3xTgifppOdkk5LLYqC+Vofe7tXMFhJOVy0YmJD7NpWDVT/nLv7HCwnSJ5XNG4MoQ==
   dependencies:
-    "@ciscospark/common" "1.47.3"
-    "@ciscospark/spark-core" "1.47.3"
-    babel-runtime "^6.23.0"
-    envify "^4.1.0"
-    lodash "^4.17.4"
-
-"@ciscospark/plugin-memberships@1.47.3":
-  version "1.47.3"
-  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-memberships/-/plugin-memberships-1.47.3.tgz#69c1cffed3091d1c10cc58acd91e8e9423c2eb84"
-  integrity sha512-wWR117sl8AWKGO62IlM7eScIoRsslcE46ayvC4FIl2I6FEZCYNMLIA56i38epRLdpXAMWicYmdw9W3W5UOVuNw==
-  dependencies:
-    "@ciscospark/spark-core" "1.47.3"
-    envify "^4.1.0"
-
-"@ciscospark/plugin-messages@1.47.3":
-  version "1.47.3"
-  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-messages/-/plugin-messages-1.47.3.tgz#ba20fea826d50ad29cec2cf927529fa09914ac1f"
-  integrity sha512-fXP7/2eVCDXRYBLbdlSDrptjDbyatYR0FKoqitrWitpMImlTj0QGGAH0WhwyYpCRJIllsJrACFPFLRC+mFPgNw==
-  dependencies:
-    "@ciscospark/spark-core" "1.47.3"
+    "@ciscospark/common" "1.49.3"
+    "@ciscospark/spark-core" "1.49.3"
     babel-runtime "^6.23.0"
     envify "^4.1.0"
     lodash "^4.17.4"
 
-"@ciscospark/plugin-people@1.47.3":
-  version "1.47.3"
-  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-people/-/plugin-people-1.47.3.tgz#0e2750d71b4de8ee8aa361f7128921de03aec3d2"
-  integrity sha512-6bpw7WTr6+SJhBUmNFKZc/Qr9LuL5GKHtGiHF34KZsjd7mAv7dHYC9Yq/kbsIfhyB+fS/xThNsqNwGbLCP8NMw==
+"@ciscospark/plugin-memberships@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-memberships/-/plugin-memberships-1.49.3.tgz#f2dfcf06d17d79d0c8f031ee3cbd6ae1b5779845"
+  integrity sha512-bsfsBwhjaxllJv1DizkJSXrEoZWjxsWARrj7MUjIbfKqhU1ClAf6yOAhUtHoxB/7fy4wp1Ith2u8S2PRK4byzw==
   dependencies:
-    "@ciscospark/common" "1.47.3"
-    "@ciscospark/spark-core" "1.47.3"
+    "@ciscospark/spark-core" "1.49.3"
+    envify "^4.1.0"
+
+"@ciscospark/plugin-messages@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-messages/-/plugin-messages-1.49.3.tgz#a34521c43170eff2dfa0888533266ca9ad893a1d"
+  integrity sha512-Jd1D2opdVT6tBt0Fmtw5++ZBc/jprzjdAyJiQTo2TDHFElW161jJV1LSVXfdiurMIadcVc6bEOwLl7LLTvEezg==
+  dependencies:
+    "@ciscospark/spark-core" "1.49.3"
+    babel-runtime "^6.23.0"
+    envify "^4.1.0"
+    lodash "^4.17.4"
+
+"@ciscospark/plugin-people@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-people/-/plugin-people-1.49.3.tgz#b33ea50db7c2c8478f977bd9d392f090f688e6e9"
+  integrity sha512-9YKBiVugcbPR0RYtxWHgEaVhMoKd1eVDeg1lh5zBRX9/MzKbcxeNZnmQ64XbmEPe1rHGaCLSPrq1QBLGPi2xkw==
+  dependencies:
+    "@ciscospark/common" "1.49.3"
+    "@ciscospark/spark-core" "1.49.3"
     babel-runtime "^6.23.0"
     envify "^4.1.0"
 
-"@ciscospark/plugin-phone@1.47.3":
-  version "1.47.3"
-  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-phone/-/plugin-phone-1.47.3.tgz#a047c0521e7880cfd19969dda89cd75a60a31df5"
-  integrity sha512-OSv0ozCTZsB5BvWEJs1jMV9AFRdgvia92pE5pdb9Snje4sQKqEIFgHISsqf1cnEQj941FiVv98XIFPhI8tZWsQ==
+"@ciscospark/plugin-phone@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-phone/-/plugin-phone-1.49.3.tgz#797a3bddb3f0b1306d1f1c8e9d32d04787e52313"
+  integrity sha512-vdS97GJuFCTN0yrZiFQrKIlDdx0INWvsiPso5cUHI1ij+SnYZPlJo1x2NG4ZGftHsXnnWalFbrntvu2BQ/ANxw==
   dependencies:
-    "@ciscospark/common" "1.47.3"
-    "@ciscospark/common-timers" "1.47.1"
-    "@ciscospark/internal-plugin-locus" "1.47.3"
-    "@ciscospark/internal-plugin-metrics" "1.47.3"
-    "@ciscospark/media-engine-webrtc" "1.47.3"
-    "@ciscospark/plugin-people" "1.47.3"
-    "@ciscospark/spark-core" "1.47.3"
+    "@ciscospark/common" "1.49.3"
+    "@ciscospark/common-timers" "1.49.3"
+    "@ciscospark/internal-plugin-locus" "1.49.3"
+    "@ciscospark/internal-plugin-metrics" "1.49.3"
+    "@ciscospark/media-engine-webrtc" "1.49.3"
+    "@ciscospark/plugin-people" "1.49.3"
+    "@ciscospark/spark-core" "1.49.3"
     ampersand-collection "^2.0.2"
     ampersand-collection-lodash-mixin "^4.0.0"
     ampersand-state "^5.0.2"
@@ -227,47 +227,47 @@
     sdp-transform "^2.4.0"
     uuid "^3.2.1"
 
-"@ciscospark/plugin-rooms@1.47.3":
-  version "1.47.3"
-  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-rooms/-/plugin-rooms-1.47.3.tgz#512a3439e5d1219c7c9a5e98a789666047df1274"
-  integrity sha512-TyOMGY3Zjoeln3YyVsS/UTZpvlyl4/ZWRzumNbw+YGeOAmq7yfzTOScEiKYoRwQQO5mLa1P+MvEMWRJAODKM9A==
+"@ciscospark/plugin-rooms@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-rooms/-/plugin-rooms-1.49.3.tgz#d08b77beb4a088d1fae2cfb48358d968d72a8c4c"
+  integrity sha512-clNjgjNOwO1GshjZxOJmEciZbkedEi75Hii+nPxz7en+URqiuyVVbLfNoUF3kDbHISyK2XBivSwp02H2gOfFvQ==
   dependencies:
-    "@ciscospark/spark-core" "1.47.3"
+    "@ciscospark/spark-core" "1.49.3"
     envify "^4.1.0"
 
-"@ciscospark/plugin-team-memberships@1.47.3":
-  version "1.47.3"
-  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-team-memberships/-/plugin-team-memberships-1.47.3.tgz#52d72685a0f0ccf992fd82dd79ba7182cb2426e3"
-  integrity sha512-Ung5Vsa6BxGf8N5AOigJiQbLW/JL8o6+LV0ECItQbB9NwYeTTfTxaeC2asyYCdKfzoTQ6wx/uuWykFhWJ++9Ug==
+"@ciscospark/plugin-team-memberships@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-team-memberships/-/plugin-team-memberships-1.49.3.tgz#3fa561728899d6a1903b285604da0cd5fc791f81"
+  integrity sha512-kyj3s0PikyWhGYnhdqFW42zLJMc9erFSvFyOryta/znLOrZxsNuEcPEaCxDsJEKBSU2ijp/WgIOxc54IwbepNw==
   dependencies:
-    "@ciscospark/spark-core" "1.47.3"
+    "@ciscospark/spark-core" "1.49.3"
     envify "^4.1.0"
 
-"@ciscospark/plugin-teams@1.47.3":
-  version "1.47.3"
-  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-teams/-/plugin-teams-1.47.3.tgz#0f73e0fb84f96982330ea20881d7c4142e323ca9"
-  integrity sha512-18LYvAytAnG57sXwa42xFYsUX/Ja/yYpo0YKrd5QS2sQCVX4JHFQowWYLULs6pbJHU/uSOw2o2Q/JA9B+V5Grw==
+"@ciscospark/plugin-teams@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-teams/-/plugin-teams-1.49.3.tgz#055b3fe951ecca2fdd6e2cc696d7c95bc25e5786"
+  integrity sha512-hMCaeieMyoF8GMRr4hOSTzFFtxr1JmhUsEV/RKYo0AHWSwgpKxc8/5YY3Zwy/T0m+ksLkU5FMC/i5xrsTLcmQQ==
   dependencies:
-    "@ciscospark/spark-core" "1.47.3"
+    "@ciscospark/spark-core" "1.49.3"
     envify "^4.1.0"
 
-"@ciscospark/plugin-webhooks@1.47.3":
-  version "1.47.3"
-  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-webhooks/-/plugin-webhooks-1.47.3.tgz#e906a8a5d632a2d5a56579012959252579403cb9"
-  integrity sha512-ZJWXdl2INBDTC3dDiPnHz+MuG+P/3n97Sn37uhh6WWYPdT7ILoIl8sHQLTLglC0Gc+9uTcz8h45x1eeO/wfv9w==
+"@ciscospark/plugin-webhooks@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/plugin-webhooks/-/plugin-webhooks-1.49.3.tgz#8893aca853a185435bdfa1afa0e9cf68f4c5622f"
+  integrity sha512-NI+BUUBPJ9XXESOJYvyFJj9/bc0AqiPn+PtNwPNTVE12l60uwB4HPctzCNSv0cfQ104k/Gxh5Pj/LQQ1fl99pg==
   dependencies:
-    "@ciscospark/spark-core" "1.47.3"
+    "@ciscospark/spark-core" "1.49.3"
     envify "^4.1.0"
 
-"@ciscospark/spark-core@1.47.3":
-  version "1.47.3"
-  resolved "https://registry.yarnpkg.com/@ciscospark/spark-core/-/spark-core-1.47.3.tgz#05294752a00975224583b475f215a5dff43f914f"
-  integrity sha512-vXHXnPrGWZ9cWFhwSCL+uKJ1TyUMfCDR6HtRgy7NHwbXmxcT3XjWq9LTgnCb6tFQq/9TDkT8n1AMqRHPDjy2lw==
+"@ciscospark/spark-core@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/spark-core/-/spark-core-1.49.3.tgz#debe2320cb51d197cfc8b5661261adc30e6eb495"
+  integrity sha512-uytTxIOa4l4PK++DQhKruMzIxAGIZw+6vdMf3YssmheSRxGnWkZ3idLoiqWq3D2GLvLl/aHNiYDgQL917cLKBQ==
   dependencies:
-    "@ciscospark/common" "1.47.3"
-    "@ciscospark/common-timers" "1.47.1"
-    "@ciscospark/http-core" "1.47.3"
-    "@ciscospark/spark-core" "1.47.3"
+    "@ciscospark/common" "1.49.3"
+    "@ciscospark/common-timers" "1.49.3"
+    "@ciscospark/http-core" "1.49.3"
+    "@ciscospark/spark-core" "1.49.3"
     ampersand-collection "^2.0.2"
     ampersand-events "^2.0.2"
     ampersand-state "^5.0.2"
@@ -277,12 +277,12 @@
     lodash "^4.17.4"
     uuid "^3.2.1"
 
-"@ciscospark/storage-adapter-local-storage@1.47.3":
-  version "1.47.3"
-  resolved "https://registry.yarnpkg.com/@ciscospark/storage-adapter-local-storage/-/storage-adapter-local-storage-1.47.3.tgz#320488650887f4dfdcffbbf89cdf8b261b4028c3"
-  integrity sha512-ITpBmulWJ6ZXr/vaw9ER79+7wViDqCW78zFcyZfLR4GRloiZ35b5FpNPcW7ZW0tski1gi71HKThUcJJ98fPs4Q==
+"@ciscospark/storage-adapter-local-storage@1.49.3":
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/@ciscospark/storage-adapter-local-storage/-/storage-adapter-local-storage-1.49.3.tgz#b615905252021528f9907dc011ef6fd5b9e36505"
+  integrity sha512-hLK7noJBj50K2dWCVax7yqVzgsi3vrRu3uee9p5wc1V1AHiriSvsC9IVcKI0R/OzOezL7ciVv8ujLROVaVCa2w==
   dependencies:
-    "@ciscospark/spark-core" "1.47.3"
+    "@ciscospark/spark-core" "1.49.3"
     babel-runtime "^6.23.0"
     envify "^4.1.0"
 
@@ -348,14 +348,14 @@
   integrity sha512-FwI9gX75FgVBJ7ywgnq/P7tw+/o1GUbtP0KzbtusLigAOgIgNISRK0ZPl4qertvXSIE8YbsVJueQ90cDt9YYyw==
 
 "@types/node@*":
-  version "11.9.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.9.4.tgz#ceb0048a546db453f6248f2d1d95e937a6f00a14"
-  integrity sha512-Zl8dGvAcEmadgs1tmSPcvwzO1YRsz38bVJQvH1RvRqSR9/5n61Q1ktcDL0ht3FXWR+ZpVmXVwN1LuH4Ax23NsA==
+  version "11.10.4"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-11.10.4.tgz#3f5fc4f0f322805f009e00ab35a2ff3d6b778e42"
+  integrity sha512-wa09itaLE8L705aXd8F80jnFpxz3Y1/KRHfKsYL2bPc0XF+wEWu8sR9n5bmeu8Ba1N9z2GRNzm/YdHcghLkLKg==
 
 "@types/node@^9.6.1":
-  version "9.6.42"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-9.6.42.tgz#96fd9c8cf15fbf2c16fe525fc2be97c49cdd0c2f"
-  integrity sha512-SpeVQJFekfnEaZZO1yl4je/36upII36L7gOT4DBx51B1GeAB45mmDb3a5OBQB+ZeFxVVOP37r8Owsl940G/fBg==
+  version "9.6.44"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-9.6.44.tgz#70bb8b5fab1f9e461c2a46a5a4fedfe3af6e2f87"
+  integrity sha512-hR+jK4kSOX+u5aQ6Zj6az5N4l1AeXH37/sOenbgxJvkO450C5qQL4/1twdufIMLC3o3hNfJNrPfQn0ivMdKfPg==
 
 "@types/range-parser@*":
   version "1.2.3"
@@ -445,9 +445,9 @@ agent-base@^4.1.0:
     es6-promisify "^5.0.0"
 
 ajv@^6.5.5:
-  version "6.9.1"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.9.1.tgz#a4d3683d74abc5670e75f0b16520f70a20ea8dc1"
-  integrity sha512-XDN92U311aINL77ieWHmqCcNlwjoP5cHXDxIxbf2MaPYuCXOHS7gHH8jktxeK5omgd52XbSTX6a4Piwd1pQmzA==
+  version "6.10.0"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.10.0.tgz#90d0d54439da587cd7e843bfb7045f50bd22bdf1"
+  integrity sha512-nffhOpkymDECQyR0mnsUtoCE8RlX38G0rYP+wgLWFyZuUyuuojSSvi/+euOiQBIn63whYwYVIIH1TvE3tu4OEg==
   dependencies:
     fast-deep-equal "^2.0.1"
     fast-json-stable-stringify "^2.0.0"
@@ -728,9 +728,9 @@ botkit-studio-sdk@^1.0.8:
     request "^2.88.0"
 
 botkit@^0.7.0:
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/botkit/-/botkit-0.7.2.tgz#46630a855508afcd2dfb5b2b452bfaa6e397ba58"
-  integrity sha512-Jt2eKdg0dMf0cXlsm0LHqBZ4wi+35zDbfnNQVelgi8h5HdBUwRCfuxPcsB4Mv7ZyD4aJerMFs6iypcdK+F49HA==
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/botkit/-/botkit-0.7.4.tgz#9f7a15414790162aefb89a5f2027a9cd490cd0aa"
+  integrity sha512-HMVWQ4fY6Xyb62SrFrEbBgKDaJiT7gbs2lva4SPdoq47jFkzgJ1wDKqkTsW+p+WMSVsHx9OaLKwyzxkrr0t6Gg==
   dependencies:
     async "^2.6.1"
     back "^1.0.2"
@@ -738,7 +738,7 @@ botkit@^0.7.0:
     botbuilder "^3.16.0"
     botkit-studio-sdk "^1.0.8"
     chalk "^2.4.1"
-    ciscospark "^1.32.23"
+    ciscospark "^1.48.0"
     clone "2.1.2"
     command-line-args "^5.0.2"
     command-line-usage "^5.0.5"
@@ -828,24 +828,24 @@ chrono-node@^1.1.3:
   dependencies:
     moment "2.21.0"
 
-ciscospark@^1.32.23:
-  version "1.47.4"
-  resolved "https://registry.yarnpkg.com/ciscospark/-/ciscospark-1.47.4.tgz#aa1d6558487469bb3ca8c45c47ec2f9c8c1c8efc"
-  integrity sha512-P5UGs+TsqYW9t7GTxY0ntWVg9JPLC+9DLRD2UfCcqT8SUrueB1kBHfEQGhdcQgGNysywN0814QopYNuXql0lWA==
+ciscospark@^1.48.0:
+  version "1.49.3"
+  resolved "https://registry.yarnpkg.com/ciscospark/-/ciscospark-1.49.3.tgz#98bff542ca7971a06394c8dc7d0faa535dee00df"
+  integrity sha512-nwj3KJ0yklpu2m5ngs0ycrsREWCnaZZpppniisA1lZA0YInFGCya9y+yfXN+6A6FVcg56QdUnEkQQ+tq9CyP+g==
   dependencies:
-    "@ciscospark/internal-plugin-wdm" "1.47.3"
-    "@ciscospark/plugin-authorization" "1.47.3"
-    "@ciscospark/plugin-logger" "1.47.3"
-    "@ciscospark/plugin-memberships" "1.47.3"
-    "@ciscospark/plugin-messages" "1.47.3"
-    "@ciscospark/plugin-people" "1.47.3"
-    "@ciscospark/plugin-phone" "1.47.3"
-    "@ciscospark/plugin-rooms" "1.47.3"
-    "@ciscospark/plugin-team-memberships" "1.47.3"
-    "@ciscospark/plugin-teams" "1.47.3"
-    "@ciscospark/plugin-webhooks" "1.47.3"
-    "@ciscospark/spark-core" "1.47.3"
-    "@ciscospark/storage-adapter-local-storage" "1.47.3"
+    "@ciscospark/internal-plugin-wdm" "1.49.3"
+    "@ciscospark/plugin-authorization" "1.49.3"
+    "@ciscospark/plugin-logger" "1.49.3"
+    "@ciscospark/plugin-memberships" "1.49.3"
+    "@ciscospark/plugin-messages" "1.49.3"
+    "@ciscospark/plugin-people" "1.49.3"
+    "@ciscospark/plugin-phone" "1.49.3"
+    "@ciscospark/plugin-rooms" "1.49.3"
+    "@ciscospark/plugin-team-memberships" "1.49.3"
+    "@ciscospark/plugin-teams" "1.49.3"
+    "@ciscospark/plugin-webhooks" "1.49.3"
+    "@ciscospark/spark-core" "1.49.3"
+    "@ciscospark/storage-adapter-local-storage" "1.49.3"
     babel-polyfill "^6.23.0"
     envify "^4.1.0"
     lodash "^4.17.4"
@@ -1023,6 +1023,13 @@ deep-extend@~0.6.0:
   resolved "https://registry.yarnpkg.com/deep-extend/-/deep-extend-0.6.0.tgz#c4fa7c95404a17a9c3e8ca7e1537312b736330ac"
   integrity sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA==
 
+define-properties@^1.1.2:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/define-properties/-/define-properties-1.1.3.tgz#cf88da6cbee26fe6db7094f61d870cbd84cee9f1"
+  integrity sha512-3MqfYKj2lLzdMSf8ZIZE/V+Zuy+BgD6f164e8K2w7dgnpKArBDerGYpM46IYYcjnkdPNMjPk9A6VFB8+3SKlXQ==
+  dependencies:
+    object-keys "^1.0.12"
+
 delayed-stream@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
@@ -1061,10 +1068,10 @@ ecc-jsbn@~0.1.1:
     jsbn "~0.1.0"
     safer-buffer "^2.1.0"
 
-ecdsa-sig-formatter@1.0.10:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/ecdsa-sig-formatter/-/ecdsa-sig-formatter-1.0.10.tgz#1c595000f04a8897dfb85000892a0f4c33af86c3"
-  integrity sha1-HFlQAPBKiJffuFAAiSoPTDOvhsM=
+ecdsa-sig-formatter@1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/ecdsa-sig-formatter/-/ecdsa-sig-formatter-1.0.11.tgz#ae0f0fa2d85045ef14a817daa3ce9acd0489e5bf"
+  integrity sha512-nagl3RYrbNv6kQkeJIpt6NJZy8twLB/2vtz6yN9Z4vRKHN4/QZJIEbqohALSgwKdnksuY3k5Addp5lg8sVoVcQ==
   dependencies:
     safe-buffer "^5.0.1"
 
@@ -1109,15 +1116,36 @@ error-ex@^1.2.0:
   dependencies:
     is-arrayish "^0.2.1"
 
+es-abstract@^1.5.0:
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/es-abstract/-/es-abstract-1.13.0.tgz#ac86145fdd5099d8dd49558ccba2eaf9b88e24e9"
+  integrity sha512-vDZfg/ykNxQVwup/8E1BZhVzFfBxs9NqMzGcvIJrqg5k2/5Za2bWo40dK2J1pgLngZ7c+Shh8lwYtLGyrwPutg==
+  dependencies:
+    es-to-primitive "^1.2.0"
+    function-bind "^1.1.1"
+    has "^1.0.3"
+    is-callable "^1.1.4"
+    is-regex "^1.0.4"
+    object-keys "^1.0.12"
+
+es-to-primitive@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/es-to-primitive/-/es-to-primitive-1.2.0.tgz#edf72478033456e8dda8ef09e00ad9650707f377"
+  integrity sha512-qZryBOJjV//LaxLTV6UC//WewneB3LcXOL9NP++ozKVXsIIIpm/2c13UDiD9Jp2eThsecw9m3jPqDwTyobcdbg==
+  dependencies:
+    is-callable "^1.1.4"
+    is-date-object "^1.0.1"
+    is-symbol "^1.0.2"
+
 es6-promise@3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-3.2.1.tgz#ec56233868032909207170c39448e24449dd1fc4"
   integrity sha1-7FYjOGgDKQkgcXDDlEjiREndH8Q=
 
 es6-promise@^4.0.3:
-  version "4.2.5"
-  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.5.tgz#da6d0d5692efb461e082c14817fe2427d8f5d054"
-  integrity sha512-n6wvpdE43VFtJq+lUDYDBFUwV8TZbuGXLV4D6wKafg13ldznKsyEvatubnmUe31zcvelSzOHF+XbaT+Bl9ObDg==
+  version "4.2.6"
+  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.6.tgz#b685edd8258886365ea62b57d30de28fadcd974f"
+  integrity sha512-aRVgGdnmW2OiySVPUC9e6m+plolMAJKjZnQlCwNSuK5yQ0JN61DZSO1X1Ufd1foqWRAlig0rhduTCHe7sVtK5Q==
 
 es6-promisify@^5.0.0:
   version "5.0.0"
@@ -1147,9 +1175,9 @@ etag@~1.8.1:
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
 
 event-target-shim@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/event-target-shim/-/event-target-shim-5.0.0.tgz#8fabe06975219af64c36ceed4771cf1ad1c3455c"
-  integrity sha512-vu4tlY5xqMEGj/rzuDHxfvm9Kk2562O5h58i8xwnkMkv/yqmBqBcDJt/vGBrOBbCKuVc5eV3ghYxAX9YUhyi0w==
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/event-target-shim/-/event-target-shim-5.0.1.tgz#5d4d3ebdf9583d63a5333ce2deb7480ab2b05789"
+  integrity sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==
 
 express-hbs@^1.0.4:
   version "1.0.5"
@@ -1267,7 +1295,7 @@ follow-redirects@^1.2.5, follow-redirects@^1.3.0:
   dependencies:
     debug "^3.2.6"
 
-for-each@^0.3.2:
+for-each@^0.3.3:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/for-each/-/for-each-0.3.3.tgz#69b447e88a0a5d32c3e7084f3f1710034b21376e"
   integrity sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==
@@ -1298,15 +1326,20 @@ fresh@0.5.2:
   resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
   integrity sha1-PYyt2Q2XZWn6g1qx+OSyOhBWBac=
 
+function-bind@^1.0.2, function-bind@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
+  integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
+
 gaxios@^1.0.4:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/gaxios/-/gaxios-1.7.0.tgz#cf1638426411cb362403038e0787105f5bf08d22"
-  integrity sha512-2SaZTtaEgnSMgRrBVnPA5O9Tc8xWfnL48fuxFL7zOHZwnam3HiNOkoosnRgnkNBZoEZrH1Aja3wMCrrDtOEqUw==
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/gaxios/-/gaxios-1.8.1.tgz#61344ec4a6fc9ef6f1c1ee6268d23ec3b8eef2ab"
+  integrity sha512-RPm2L7qDjo6FgSle5+v2LvDO/eN+/H9jqmX8PJUAQZVmSXBqDDgP/TFSNhC6RMgRDPav7JclkbQjVjos4P6V8A==
   dependencies:
     abort-controller "^2.0.2"
     extend "^3.0.2"
     https-proxy-agent "^2.2.1"
-    node-fetch "^2.2.0"
+    node-fetch "^2.3.0"
 
 gcp-metadata@^0.6.3:
   version "0.6.3"
@@ -1456,6 +1489,18 @@ has-flag@^3.0.0:
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
   integrity sha1-tdRU3CGZriJWmfNGfloH87lVuv0=
 
+has-symbols@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/has-symbols/-/has-symbols-1.0.0.tgz#ba1a8f1af2a0fc39650f5c850367704122063b44"
+  integrity sha1-uhqPGvKg/DllD1yFA2dwQSIGO0Q=
+
+has@^1.0.1, has@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/has/-/has-1.0.3.tgz#722d7cbfc1f6aa8241f16dd814e011e1f41e8796"
+  integrity sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==
+  dependencies:
+    function-bind "^1.1.1"
+
 hash-base@^3.0.0:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/hash-base/-/hash-base-3.0.4.tgz#5fc8686847ecd73499403319a6b0a3f3f6ae4918"
@@ -1533,10 +1578,15 @@ is-buffer@^1.1.5, is-buffer@~1.1.1:
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
   integrity sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==
 
-is-callable@^1.1.3:
+is-callable@^1.1.3, is-callable@^1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/is-callable/-/is-callable-1.1.4.tgz#1e1adf219e1eeb684d691f9d6a05ff0d30a24d75"
   integrity sha512-r5p9sxJjYnArLjObpjA4xu5EKI3CuKHkJXMhT7kwbpUyIFD1n5PMAsoPvWnvtZiNz7LjkYDRZhd7FlI0eMijEA==
+
+is-date-object@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/is-date-object/-/is-date-object-1.0.1.tgz#9aa20eb6aeebbff77fbd33e74ca01b33581d3a16"
+  integrity sha1-mqIOtq7rv/d/vTPnTKAbM1gdOhY=
 
 is-fullwidth-code-point@^1.0.0:
   version "1.0.0"
@@ -1549,6 +1599,20 @@ is-function@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/is-function/-/is-function-1.0.1.tgz#12cfb98b65b57dd3d193a3121f5f6e2f437602b5"
   integrity sha1-Es+5i2W1fdPRk6MSH19uL0N2ArU=
+
+is-regex@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/is-regex/-/is-regex-1.0.4.tgz#5517489b547091b0930e095654ced25ee97e9491"
+  integrity sha1-VRdIm1RwkbCTDglWVM7SXul+lJE=
+  dependencies:
+    has "^1.0.1"
+
+is-symbol@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/is-symbol/-/is-symbol-1.0.2.tgz#a055f6ae57192caee329e7a860118b497a950f38"
+  integrity sha512-HS8bZ9ox60yCJLH9snBpIwv9pYUAkcuLhSA1oero1UB5y9aiQpRA8y2ex945AOtCZL1lJDeIk3G5LthswI46Lw==
+  dependencies:
+    has-symbols "^1.0.0"
 
 is-typedarray@~1.0.0:
   version "1.0.0"
@@ -1616,11 +1680,11 @@ json-stringify-safe@~5.0.1:
   integrity sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus=
 
 jsonwebtoken@^8.1.0, jsonwebtoken@^8.2.2:
-  version "8.4.0"
-  resolved "https://registry.yarnpkg.com/jsonwebtoken/-/jsonwebtoken-8.4.0.tgz#8757f7b4cb7440d86d5e2f3becefa70536c8e46a"
-  integrity sha512-coyXjRTCy0pw5WYBpMvWOMN+Kjaik2MwTUIq9cna/W7NpO9E+iYbumZONAz3hcr+tXFJECoQVrtmIoC3Oz0gvg==
+  version "8.5.0"
+  resolved "https://registry.yarnpkg.com/jsonwebtoken/-/jsonwebtoken-8.5.0.tgz#ebd0ca2a69797816e1c5af65b6c759787252947e"
+  integrity sha512-IqEycp0znWHNA11TpYi77bVgyBO/pGESDh7Ajhas+u0ttkGkKYIIAjniL4Bw5+oVejVF+SYkaI7XKfwCCyeTuA==
   dependencies:
-    jws "^3.1.5"
+    jws "^3.2.1"
     lodash.includes "^4.3.0"
     lodash.isboolean "^3.0.3"
     lodash.isinteger "^4.0.4"
@@ -1629,6 +1693,7 @@ jsonwebtoken@^8.1.0, jsonwebtoken@^8.2.2:
     lodash.isstring "^4.0.1"
     lodash.once "^4.0.0"
     ms "^2.1.1"
+    semver "^5.6.0"
 
 jsprim@^1.2.2:
   version "1.4.1"
@@ -1641,15 +1706,15 @@ jsprim@^1.2.2:
     verror "1.10.0"
 
 jwa@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/jwa/-/jwa-1.2.0.tgz#606da70c1c6d425cad329c77c99f2df2a981489a"
-  integrity sha512-Grku9ZST5NNQ3hqNUodSkDfEBqAmGA1R8yiyPHOnLzEKI0GaCQC/XhFmsheXYuXzFQJdILbh+lYBiliqG5R/Vg==
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/jwa/-/jwa-1.4.0.tgz#8f61dc799acf0309f2d4b22a91ce73d6d2bb206c"
+  integrity sha512-mt6IHaq0ZZWDBspg0Pheu3r9sVNMEZn+GJe1zcdYyhFcDSclp3J8xEdO4PjZolZ2i8xlaVU1LetHM0nJejYsEw==
   dependencies:
     buffer-equal-constant-time "1.0.1"
-    ecdsa-sig-formatter "1.0.10"
+    ecdsa-sig-formatter "1.0.11"
     safe-buffer "^5.0.1"
 
-jws@^3.1.5:
+jws@^3.1.5, jws@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/jws/-/jws-3.2.1.tgz#d79d4216a62c9afa0a3d5e8b5356d75abdeb2be5"
   integrity sha512-bGA2omSrFUkd72dhh05bIAN832znP4wOU3lfuXtRBuGTbsmNmDXMQg28f0Vsxaxgk4myF5YkKQpz6qeRpMgX9g==
@@ -1974,7 +2039,7 @@ node-env-file@^0.1.8:
   resolved "https://registry.yarnpkg.com/node-env-file/-/node-env-file-0.1.8.tgz#fccb7b050f735b5a33da9eb937cf6f1ab457fb69"
   integrity sha1-/Mt7BQ9zW1oz2p65N89vGrRX+2k=
 
-node-fetch@^2.2.0:
+node-fetch@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.3.0.tgz#1a1d940bbfb916a1d3e0219f037e89e71f8c5fa5"
   integrity sha512-MOd8pV3fxENbryESLgVIeaGKrdl+uaYhCSSVkjeOb/31/njTpcis5aWfdqgNlHIrKOLRbMnfPINPOML2CIFeXA==
@@ -2048,6 +2113,11 @@ object-assign@^4.1.1:
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
   integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
 
+object-keys@^1.0.12:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.1.0.tgz#11bd22348dd2e096a045ab06f6c85bcc340fa032"
+  integrity sha512-6OO5X1+2tYkNyNEx6TsCxEqFfRWaqx6EtMiSbGrw8Ob8v9Ne+Hl8rBAgLBZn5wjEz3s/s6U1WXFUFOcxxAwUpg==
+
 on-finished@~2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/on-finished/-/on-finished-2.3.0.tgz#20f1336481b083cd75337992a16971aa2d906947"
@@ -2081,12 +2151,12 @@ os-locale@^1.4.0:
     lcid "^1.0.0"
 
 parse-headers@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/parse-headers/-/parse-headers-2.0.1.tgz#6ae83a7aa25a9d9b700acc28698cd1f1ed7e9536"
-  integrity sha1-aug6eqJanZtwCswoaYzR8e1+lTY=
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/parse-headers/-/parse-headers-2.0.2.tgz#9545e8a4c1ae5eaea7d24992bca890281ed26e34"
+  integrity sha512-/LypJhzFmyBIDYP9aDVgeyEb5sQfbfY5mnDq4hVhlQ69js87wXfmEI5V3xI6vvXasqebp0oCytYFLxsBVfCzSg==
   dependencies:
-    for-each "^0.3.2"
-    trim "0.0.1"
+    for-each "^0.3.3"
+    string.prototype.trim "^1.1.2"
 
 parse-json@^2.2.0:
   version "2.2.0"
@@ -2478,7 +2548,7 @@ sdp@^2.6.0, sdp@^2.9.0:
   resolved "https://registry.yarnpkg.com/sdp/-/sdp-2.9.0.tgz#2eed2d9c0b26c81ff87593107895c68d6fb9a0a6"
   integrity sha512-XAVZQO4qsfzVTHorF49zCpkdxiGmPNjA8ps8RcJGtGP3QJ/A8I9/SVg/QnkAFDMXIyGbHZBBFwYBw6WdnhT96w==
 
-"semver@2 || 3 || 4 || 5", semver@^5.1.0, semver@^5.5.0:
+"semver@2 || 3 || 4 || 5", semver@^5.1.0, semver@^5.5.0, semver@^5.6.0:
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.6.0.tgz#7e74256fbaa49c75aa7c7a205cc22799cac80004"
   integrity sha512-RS9R6R35NYgQn++fkDWaOmqGoj4Ek9gGs+DPxNUZKuwE183xjJroKvyo1IzVFeXvUrvmALy6FWD5xrdJT25gMg==
@@ -2620,6 +2690,15 @@ string-width@^1.0.1, string-width@^1.0.2:
     is-fullwidth-code-point "^1.0.0"
     strip-ansi "^3.0.0"
 
+string.prototype.trim@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/string.prototype.trim/-/string.prototype.trim-1.1.2.tgz#d04de2c89e137f4d7d206f086b5ed2fae6be8cea"
+  integrity sha1-0E3iyJ4Tf019IG8Ia17S+ua+jOo=
+  dependencies:
+    define-properties "^1.1.2"
+    es-abstract "^1.5.0"
+    function-bind "^1.0.2"
+
 string_decoder@~0.10.x:
   version "0.10.31"
   resolved "https://registry.yarnpkg.com/string_decoder/-/string_decoder-0.10.31.tgz#62e203bc41766c6c28c9fc84301dab1c5310fa94"
@@ -2700,11 +2779,6 @@ tough-cookie@~2.4.3:
     psl "^1.1.24"
     punycode "^1.4.1"
 
-trim@0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/trim/-/trim-0.0.1.tgz#5858547f6b290757ee95cccc666fb50084c460dd"
-  integrity sha1-WFhUf2spB1fulczMZm+1AITEYN0=
-
 tslib@^1.7.1:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
@@ -2723,14 +2797,14 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   integrity sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=
 
 twilio@^3.23.1:
-  version "3.28.0"
-  resolved "https://registry.yarnpkg.com/twilio/-/twilio-3.28.0.tgz#8ad8b88529ac0cdf0d571f88bf22dc60d1caa002"
-  integrity sha512-wsBU2+4bWpuhVl4ZjYPaR7WYD2U27ghALclK2Jg9pp4RgtD0EhPMIhTFWkGJ8+zUqdIW/ZkYA/4UocDx9vdoQw==
+  version "3.29.0"
+  resolved "https://registry.yarnpkg.com/twilio/-/twilio-3.29.0.tgz#18c39a30cb58e575a59cc76f626f43f7a4f48b58"
+  integrity sha512-gMs8SUpndjRUstVrwU+OcMxOneZegwp3GLPzlfSk1a5zv8SJmV2HVV7b29+gMw0fHxKPuHPfE4zrbgYlSlrMzw==
   dependencies:
     "@types/express" "^4.11.1"
     deprecate "1.0.0"
     jsonwebtoken "^8.1.0"
-    lodash "^4.17.10"
+    lodash "^4.17.11"
     moment "2.19.3"
     q "2.0.x"
     request "^2.87.0"
@@ -2908,9 +2982,9 @@ ws@^4.0.0:
     safe-buffer "~5.1.0"
 
 ws@^6.1.0:
-  version "6.1.3"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-6.1.3.tgz#d2d2e5f0e3c700ef2de89080ebc0ac6e1bf3a72d"
-  integrity sha512-tbSxiT+qJI223AP4iLfQbkbxkwdFcneYinM2+x46Gx2wgvbaOMO36czfdfVUBRTHvzAMRhDd98sA5d/BuWbQdg==
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-6.2.0.tgz#13806d9913b2a5f3cbb9ba47b563c002cbc7c526"
+  integrity sha512-deZYUNlt2O4buFCa3t5bKLf8A7FPP/TVjwOeVNpw818Ma5nk4MLXls2eoEGS39o8119QIYxTrTDoPQ5B/gTD6w==
   dependencies:
     async-limiter "~1.0.0"
 

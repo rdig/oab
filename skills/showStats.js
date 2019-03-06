@@ -1,5 +1,5 @@
 require('node-env-file')('.env');
-const readSheet = require('../controller/googleSheetsRead');
+const readSheet = require('../lib/googleSheetsRead');
 const sendWebHookStats = require('../controller/sendWebHookStats');
 const formatRatingData = require('../utils/formatRatingData');
 const formatRaterData = require('../utils/formatRaterData');

@@ -1,5 +1,5 @@
-require('node-env-file')('.env');
-const saveDialogToSheets = require('./saveDialogToSheets');
+const saveDialogToSheets = require('../lib/saveDialogToSheets');
+const interactiveMenuRatePublic = require('../components/interactiveMenuRatePublic');
 
 module.exports = async controller => {
   controller.middleware.receive.use((oab, event, next) => {
@@ -16,19 +16,16 @@ module.exports = async controller => {
   controller.on(
     'dialog_submission',
     async (oab, event) => {
-      oab.whisper(
-        event,
-        `Submission Successful! You can check all the other submissions here: https://docs.google.com/spreadsheets/d/${process.env.spreadSheetId}`
-      );
+      /*
+       * @NOTE Call dialogOk or else Slack will think this is an error
+       */
+      oab.dialogOk();
       try {
         saveDialogToSheets(oab, event, controller);
-        /*
-         * @NOTE Call dialogOk or else Slack will think this is an error
-         */
-        oab.dialogOk();
       } catch (error) {
         oab.dialogError('Could not post your submission to the Spreadsheet');
       }
+      interactiveMenuRatePublic(oab, event);
     },
   );
 };
