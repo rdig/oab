@@ -12,7 +12,12 @@ module.exports = (controller, topRatings, topRaters) => {
     let ratingMessage = '';
     let ratersMessage = '';
     topRatings.map(entry => {
-      ratingMessage += `${entry[2]}. ${entry[0]}, Score: _${entry[1]}_\n`;
+      const place = entry[4];
+      const user = entry[0];
+      const score = entry[1];
+      const positiveCount = entry[2];
+      const negativeCount = entry[3];
+      ratingMessage += `${[place]}. ${user}, Score: _${score}_, Negative: _${negativeCount}_, Positive: _${positiveCount}_\n`;
     });
     topRaters.map(entry => {
       ratersMessage += `${entry[2]}. ${entry[0]}, Submissions: _${entry[1]}_\n`;
@@ -43,7 +48,7 @@ module.exports = (controller, topRatings, topRaters) => {
           fields,
         },
         {
-          text: `_All stat data is taken from:_ https://docs.google.com/spreadsheets/d/${process.env.spreadSheetId}`,
+          text: `_All stats data is taken from <https://docs.google.com/spreadsheets/d/${process.env.spreadSheetId}|this spreadsheet>_`,
           footer: `${description}, version: ${version}`,
           footer_icon: 'https://raw.githubusercontent.com/rdig/oab/master/public/oab-logo-geometric_128.png',
           ts: Math.floor(Date.now() / 1000)
