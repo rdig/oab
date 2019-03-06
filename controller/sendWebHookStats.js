@@ -20,7 +20,12 @@ module.exports = (controller, topRatings, topRaters) => {
       ratingMessage += `${[place]}. ${user}, Score: _${score}_, Negative: _${negativeCount}_, Positive: _${positiveCount}_\n`;
     });
     topRaters.map(entry => {
-      ratersMessage += `${entry[2]}. ${entry[0]}, Submissions: _${entry[1]}_\n`;
+      const place = entry[4];
+      const rater = entry[0];
+      const ratings = entry[1];
+      const positiveCount = entry[2];
+      const negativeCount = entry[3];
+      ratersMessage += `${[place]}. ${rater}, Submissions: _${ratings}_, Negative: _${negativeCount}_, Positive: _${positiveCount}_\n`;
     });
 
     const fields = [
