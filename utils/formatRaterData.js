@@ -48,9 +48,13 @@ module.exports = values => {
     })
     .sort((firstArray, secondArray) => secondArray[1] - firstArray[1])
     .map((entry, index, ratings) => {
-      let place = ratings[index - 1] ? ratings[index - 1][4] + 1 : index + 1;
-      if (ratings[index - 1] && ratings[index - 1][1] === entry[1]) {
-        place = ratings[index - 1][4];
+      const previousRaterEntry = ratings[index - 1];
+      const previousPlace = previousRaterEntry ? previousRaterEntry[4] : 0;
+      const previousCount = previousRaterEntry ? previousRaterEntry[1] : 0;
+      const currentCount = entry[1];
+      let place = previousRaterEntry ? previousPlace + 1 : index + 1;
+      if (previousRaterEntry && previousCount === currentCount) {
+        place = previousPlace;
       }
       entry.push(place);
       return entry;
