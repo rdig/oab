@@ -66,7 +66,7 @@ if (!process.env.clientId || !process.env.clientSecret) {
   /*
    * Handle /accountable slash command
    */
-  require(__dirname + '/skills/slashCommandAccountable.js')(controller);
+  require(__dirname + '/skills/slashCommand.js')(controller);
 
   /*
    * Handle dialog submission
