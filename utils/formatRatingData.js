@@ -4,10 +4,10 @@ module.exports = values => {
    */
   const ratingStats = {};
   values.map((entry, index) => {
+    const rating = parseInt(entry[3], 10);
+    const user = entry[1];
+    const positiveRating = rating > 0;
     if (index !== 0) {
-      const rating = parseInt(entry[3], 10);
-      const user = entry[1];
-      const positiveRating = rating > 0;
       if (ratingStats[user]) {
         ratingStats[user].score += rating;
       } else {
