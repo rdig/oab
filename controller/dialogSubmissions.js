@@ -1,5 +1,5 @@
-require('node-env-file')('.env');
 const saveDialogToSheets = require('../lib/saveDialogToSheets');
+const interactiveMenuRatePublic = require('../components/interactiveMenuRatePublic');
 
 module.exports = async controller => {
   controller.middleware.receive.use((oab, event, next) => {
@@ -16,46 +16,16 @@ module.exports = async controller => {
   controller.on(
     'dialog_submission',
     async (oab, event) => {
+      /*
+       * @NOTE Call dialogOk or else Slack will think this is an error
+       */
+      oab.dialogOk();
       try {
-        // saveDialogToSheets(oab, event, controller);
-        /*
-         * @NOTE Call dialogOk or else Slack will think this is an error
-         */
-        oab.dialogOk();
+        saveDialogToSheets(oab, event, controller);
       } catch (error) {
         oab.dialogError('Could not post your submission to the Spreadsheet');
       }
-      oab.replyInteractive(event, {
-          text: '...',
-          attachments: [
-              {
-                  title: 'My buttons',
-                  callback_id: '123',
-                  attachment_type: 'default',
-                  actions: [
-                      {
-                          "name":"yes",
-                          "text": "Yes!",
-                          "value": "yes",
-                          "type": "button",
-                      },
-                      {
-                         "text": "No!",
-                          "name": "no",
-                          "value": "delete",
-                          "style": "danger",
-                          "type": "button",
-                          "confirm": {
-                            "title": "Are you sure?",
-                            "text": "This will do something!",
-                            "ok_text": "Yes",
-                            "dismiss_text": "No"
-                          }
-                      }
-                  ]
-              }
-          ]
-      });
+      interactiveMenuRatePublic(oab, event);
     },
   );
 };
