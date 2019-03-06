@@ -1,7 +1,6 @@
 require('node-env-file')('.env');
 const appendSheet = require('./googleSheetsAppend');
 const util = require('util');
-const sendWebHookRating = require('./sendWebHookRating');
 
 module.exports = async (oab, event, controller, debug = process.env.DEBUG || false) => {
   const { reason, rating, notes } = event.submission;
@@ -35,16 +34,5 @@ module.exports = async (oab, event, controller, debug = process.env.DEBUG || fal
       ],
     ],
     debug ? console.log : () => null,
-  );
-  /*
-   * Post a notification to the pre-selected channel
-   */
-  sendWebHookRating(
-    controller,
-    event.submission.userOrAnon === 'you' ? currentUser.real_name : 'Anonymous',
-    accountableUser.real_name,
-    reason,
-    rating,
-    notes
   );
 };
