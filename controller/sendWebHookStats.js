@@ -9,39 +9,6 @@ module.exports = (controller, topRatings, topRaters) => {
     }
   });
   if (topRatings.length && topRaters.length) {
-    let ratingMessage = '';
-    let ratersMessage = '';
-
-    topRatings.map(entry => {
-      const place = entry[4];
-      const user = entry[0];
-      const score = entry[1];
-      const positiveCount = entry[2];
-      const negativeCount = entry[3];
-      ratingMessage += `${[place]}. ${user}, Score: _${score}_, Negative: _${negativeCount}_, Positive: _${positiveCount}_\n`;
-    });
-    topRaters.map(entry => {
-      const place = entry[4];
-      const rater = entry[0];
-      const ratings = entry[1];
-      const positiveCount = entry[2];
-      const negativeCount = entry[3];
-      ratersMessage += `${[place]}. ${rater}, Submissions: _${ratings}_, Negative: _${negativeCount}_, Positive: _${positiveCount}_\n`;
-    });
-
-    const fields = [
-        {
-          title: 'Best Rated',
-          value: ratingMessage,
-          short: false
-        },
-        {
-          title: 'Top Rater',
-          value: ratersMessage,
-          short: false
-        },
-    ];
-
     return util.promisify(oab.sendWebhook)({
       username: 'oab-webhook',
       icon_url: 'https://raw.githubusercontent.com/rdig/oab/master/public/oab-logo-geometric_512.png',
@@ -49,10 +16,46 @@ module.exports = (controller, topRatings, topRaters) => {
         {
           author_name: `@${name}`,
           author_link: homepage,
-          thumb_url: 'https://raw.githubusercontent.com/rdig/oab/master/public/oab-icon-trophy_160.png',
           text: `_${description}_ Rating Statistics`,
+        },
+        {
+          text: '*Best Rated*',
+          color: '#142a4b',
+        },
+        {
+          thumb_url: 'https://raw.githubusercontent.com/rdig/oab/master/public/oab-icon-trophy_160.png',
           color: '#f4d55f',
-          fields,
+          fields: topRatings.map(entry => {
+            const place = entry[4];
+            const user = entry[0];
+            const score = entry[1];
+            const positiveCount = entry[2];
+            const negativeCount = entry[3];
+            return {
+              title: `${[place]}. ${user}`,
+              value: `Score: _${score}_, Negative: _${negativeCount}_, Positive: _${positiveCount}_`,
+              short: false,
+            };
+          }),
+        },
+        {
+          text: '*Top Rater*',
+          color: '#142a4b',
+        },
+        {
+          color: '#f4d55f',
+          fields: topRaters.map(entry => {
+            const place = entry[4];
+            const rater = entry[0];
+            const ratings = entry[1];
+            const positiveCount = entry[2];
+            const negativeCount = entry[3];
+            return {
+              title: `${[place]}. ${rater}`,
+              value: `Submissions: _${ratings}_, Negative: _${negativeCount}_, Positive: _${positiveCount}_`,
+              short: false,
+            };
+          }),
         },
         {
           text: `_All stats data is taken from <https://docs.google.com/spreadsheets/d/${process.env.spreadSheetId}|this spreadsheet>_`,
