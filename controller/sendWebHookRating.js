@@ -2,7 +2,7 @@ require('node-env-file')('.env');
 const util = require('util');
 const { name, description, version, homepage } = require('../package.json');
 
-module.exports = (controller, raterUser, accountableUser, reason, rating, notes) => {
+module.exports = (controller, raterUser, accountableUser, reason, rating, notes, timeStamp) => {
   const oab = controller.spawn({
     incoming_webhook: {
       url: process.env.webHookUrl,
@@ -64,7 +64,7 @@ module.exports = (controller, raterUser, accountableUser, reason, rating, notes)
         fields,
         footer: `${description}, version: ${version}`,
         footer_icon: 'https://raw.githubusercontent.com/rdig/oab/master/public/oab-logo-geometric_128.png',
-        ts: Math.floor(Date.now() / 1000)
+        ts: timeStamp,
       },
     ],
   });

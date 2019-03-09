@@ -39,7 +39,14 @@ module.exports = controller => {
           event.user,
           (err, user_data) => {
             if (user_data) {
-              const { raterUser, accountableUser, reason, rating, notes } = user_data;
+              const {
+                raterUser,
+                accountableUser,
+                reason,
+                rating,
+                notes,
+                timeStamp,
+              } = user_data;
               /*
                * Post a notification to the pre-selected channel
                */
@@ -49,7 +56,8 @@ module.exports = controller => {
                 accountableUser,
                 reason,
                 rating,
-                notes
+                notes,
+                timeStamp,
               );
             }
           },
