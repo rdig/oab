@@ -11,6 +11,7 @@ module.exports = (controller, topRatings, topRaters) => {
   if (topRatings.length && topRaters.length) {
     let ratingMessage = '';
     let ratersMessage = '';
+
     topRatings.map(entry => {
       const place = entry[4];
       const user = entry[0];
@@ -40,6 +41,7 @@ module.exports = (controller, topRatings, topRaters) => {
           short: false
         },
     ];
+
     return util.promisify(oab.sendWebhook)({
       username: 'oab-webhook',
       icon_url: 'https://raw.githubusercontent.com/rdig/oab/master/public/oab-logo-geometric_512.png',
@@ -61,6 +63,7 @@ module.exports = (controller, topRatings, topRaters) => {
       ],
     });
   }
+
   return util.promisify(oab.sendWebhook)({
     username: 'oab-webhook',
     icon_url: 'https://raw.githubusercontent.com/rdig/oab/master/public/oab-logo-geometric_512.png',
