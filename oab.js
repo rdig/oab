@@ -76,7 +76,7 @@ if (!process.env.clientId || !process.env.clientSecret) {
   /*
    * Handle the submission interactive menu
    */
-  // require(__dirname + '/controller/interactiveMenu.js')(controller);
+  require(__dirname + '/controller/interactiveMenu.js')(controller);
 }
 
 function usage_tip() {

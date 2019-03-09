@@ -1,5 +1,5 @@
 require('node-env-file')('.env');
-const util = require('util');
+const getUserInfo = require('../utils/getUserInfo');
 const saveDialogToSheets = require('../lib/saveDialogToSheets');
 
 module.exports = async controller => {
@@ -22,25 +22,15 @@ module.exports = async controller => {
        * @NOTE Call dialogOk or else Slack will think this is an error
        */
       oab.dialogOk();
-      /*
-       * Get the user that was just rated,
-       * so we can use it in the confirmation message
-       *
-       * @TODO Reduce code repetition
-       * This is used both here and inside `saveDialogToSheets`.
-       * Maybe find a way to call this method just once.
-       */
-      const { user: { real_name: accountableUser } } =
-        await util.promisify(oab.api.users.info)({
-          user: event.submission.accountableUser,
-        });
-      oab.whisper(
-        event,
-        `Your rating was submitted successfully! *${accountableUser}* was aslo notified!
-_You can see all the other submissions in <https://docs.google.com/spreadsheets/d/${process.env.spreadSheetId}|this spreadsheet>_`
-      );
       try {
-        saveDialogToSheets(oab, event, controller);
+        const rater = await getUserInfo(oab, event.user);
+        const ratee = await getUserInfo(oab, event.submission.accountableUser);
+        oab.whisper(
+          event,
+          `Your rating was submitted successfully! *${ratee.displayName}* was also notified!
+  _You can see all the other submissions in <https://docs.google.com/spreadsheets/d/${process.env.spreadSheetId}|this spreadsheet>_`
+        );
+        saveDialogToSheets(oab, event, controller, rater, ratee);
       } catch (error) {
         oab.dialogError('Could not post your submission to the Spreadsheet');
       }
