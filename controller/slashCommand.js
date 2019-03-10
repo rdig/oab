@@ -25,7 +25,7 @@ module.exports = controller => {
         return showHelp(oab, event);
       }
       /*
-       * @NOTE For everything else, we open the rating dilaog
+       * @NOTE For everything else, we open the rating dialog
        */
       default: {
         return oab.replyWithDialog(

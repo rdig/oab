@@ -5,7 +5,7 @@ module.exports = values => {
   const raterStats = {};
   values.map((entry, index) => {
     const rater = entry[0];
-    const positiveRating = parseInt(entry[3], 10) > 0;
+    const positiveRating = parseInt(entry[5], 10) > 0;
     if (index !== 0) {
       if (raterStats[rater]) {
         raterStats[rater].ratings += 1;

@@ -1,5 +1,7 @@
+require('node-env-file')('.env');
+const getUserInfo = require('../utils/getUserInfo');
 const saveDialogToSheets = require('../lib/saveDialogToSheets');
-const interactiveMenuRatePublic = require('../components/interactiveMenuRatePublic');
+const updateSheetsValues = require('../lib/updateSheetsValues');
 
 module.exports = async controller => {
   controller.middleware.receive.use((oab, event, next) => {
@@ -11,21 +13,41 @@ module.exports = async controller => {
     next();
   });
 
-  // handle a dialog submission
-  // the values from the form are in event.submission
-  controller.on(
-    'dialog_submission',
-    async (oab, event) => {
+  /*
+   * Handle a dialog submission
+   */
+  controller.on('dialog_submission', async (oab, event) => {
+    /*
+     * @NOTE Call dialogOk or else Slack will think this is an error
+     */
+    oab.dialogOk();
+    switch (event.callback_id) {
       /*
-       * @NOTE Call dialogOk or else Slack will think this is an error
+       * Rating Dialog
        */
-      oab.dialogOk();
-      try {
-        saveDialogToSheets(oab, event, controller);
-      } catch (error) {
-        oab.dialogError('Could not post your submission to the Spreadsheet');
+      case 'accountability_submission_dialog':
+        try {
+          const rater = await getUserInfo(oab, event.user);
+          const ratee = await getUserInfo(oab, event.submission.accountableUser);
+          oab.whisper(
+            event,
+            `Your rating was submitted successfully! *${ratee.displayName}* was also notified!
+    _You can see all the other submissions in <https://docs.google.com/spreadsheets/d/${process.env.spreadSheetId}|this spreadsheet>_`
+          );
+          return saveDialogToSheets(oab, event, controller, rater, ratee);
+        } catch (error) {
+          return oab.dialogError('Could not post your submission to the Spreadsheet');
+        }
+      case 'response_submission_dialog':
+        try {
+          const ratee = await getUserInfo(oab, event.user);
+          updateSheetsValues(oab, event, controller, ratee, event.submission.response);
+        } catch (error) {
+          return oab.dialogError('Could not post your response to the Spreadsheet');
+        }
+      default: {
+        return false;
       }
-      interactiveMenuRatePublic(oab, event);
-    },
-  );
+    }
+  });
 };

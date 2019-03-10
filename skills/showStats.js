@@ -8,7 +8,7 @@ const { description } = require('../package.json');
 module.exports = async (controller, oab, event) => {
   try {
     return readSheet(
-      'A2:E',
+      'A2:F',
       values => sendWebHookStats(
         controller,
         formatRatingData(values) || [],
