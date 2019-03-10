@@ -15,25 +15,29 @@ module.exports = async controller => {
   /*
    * Handle a dialog submission
    */
-  controller.on(
-    'dialog_submission',
-    async (oab, event) => {
-      /*
-       * @NOTE Call dialogOk or else Slack will think this is an error
-       */
-      oab.dialogOk();
-      try {
-        const rater = await getUserInfo(oab, event.user);
-        const ratee = await getUserInfo(oab, event.submission.accountableUser);
-        oab.whisper(
-          event,
-          `Your rating was submitted successfully! *${ratee.displayName}* was also notified!
-  _You can see all the other submissions in <https://docs.google.com/spreadsheets/d/${process.env.spreadSheetId}|this spreadsheet>_`
-        );
-        saveDialogToSheets(oab, event, controller, rater, ratee);
-      } catch (error) {
-        oab.dialogError('Could not post your submission to the Spreadsheet');
+  controller.on('dialog_submission', async (oab, event) => {
+    /*
+     * @NOTE Call dialogOk or else Slack will think this is an error
+     */
+    oab.dialogOk();
+    console.log(event.callback_id);
+    switch (event.callback_id) {
+      case 'accountability_submission_dialog':
+        try {
+          const rater = await getUserInfo(oab, event.user);
+          const ratee = await getUserInfo(oab, event.submission.accountableUser);
+          oab.whisper(
+            event,
+            `Your rating was submitted successfully! *${ratee.displayName}* was also notified!
+    _You can see all the other submissions in <https://docs.google.com/spreadsheets/d/${process.env.spreadSheetId}|this spreadsheet>_`
+          );
+          return saveDialogToSheets(oab, event, controller, rater, ratee);
+        } catch (error) {
+          return oab.dialogError('Could not post your submission to the Spreadsheet');
+        }
+      default: {
+        return false;
       }
-    },
-  );
+    }
+  });
 };
