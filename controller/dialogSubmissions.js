@@ -1,6 +1,7 @@
 require('node-env-file')('.env');
 const getUserInfo = require('../utils/getUserInfo');
 const saveDialogToSheets = require('../lib/saveDialogToSheets');
+const updateSheetsValues = require('../lib/updateSheetsValues');
 
 module.exports = async controller => {
   controller.middleware.receive.use((oab, event, next) => {
@@ -20,8 +21,10 @@ module.exports = async controller => {
      * @NOTE Call dialogOk or else Slack will think this is an error
      */
     oab.dialogOk();
-    console.log(event.callback_id);
     switch (event.callback_id) {
+      /*
+       * Rating Dialog
+       */
       case 'accountability_submission_dialog':
         try {
           const rater = await getUserInfo(oab, event.user);
@@ -34,6 +37,16 @@ module.exports = async controller => {
           return saveDialogToSheets(oab, event, controller, rater, ratee);
         } catch (error) {
           return oab.dialogError('Could not post your submission to the Spreadsheet');
+        }
+      case 'response_submission_dialog':
+        try {
+          const ratee = await getUserInfo(oab, event.user);
+          updateSheetsValues(oab, event, controller, ratee, event.submission.response);
+          return oab.reply(event, {
+            text: "I've submitted your response. Nicely done!"
+          });
+        } catch (error) {
+          return oab.dialogError('Could not post your response to the Spreadsheet');
         }
       default: {
         return false;
