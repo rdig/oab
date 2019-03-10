@@ -1,72 +1,65 @@
 require('node-env-file')('.env');
-const sendWebHookRating = require('../controller/sendWebHookRating');
+const updateSheet = require('../lib/googleSheetsUpdate');
 
-module.exports = controller => {
-  controller.on('interactive_message_callback', (oab, event) => {
-    /*
-     * @NOTE Acknoledge the interactive message in the 3000 ms time frame first, to
-     * prevent the Timeout Slack error
-     */
-    oab.replyAcknowledge();
+module.exports = (
+  controller,
+  debug = process.env.DEBUG || false,
+) => controller.on('interactive_message_callback', (oab, event) => {
+  /*
+   * @NOTE Acknoledge the interactive message in the 3000 ms time frame first, to
+   * prevent the Timeout Slack error
+   */
+  oab.replyAcknowledge();
 
-    switch (event.text) {
-      /*
-       * @NOTE
-       */
-      case 'private': {
-        return oab.replyInteractive(event, {
-          text: 'Ok, I will not post your rating publicly.',
-          attachments: [
-            {
-              text: `But just so you know, all ratings are collected in <https://docs.google.com/spreadsheets/d/${process.env.spreadSheetId}|this spreadsheet>.`,
-            },
-          ],
-        });
-      };
-      /*
-       * @NOTE
-       */
-      case 'public': {
-        oab.replyInteractive(event, {
-          text: 'Ok, I will publish yout rating publicly.',
-          attachments: [
-            {
-              text: `Just so you know, all ratings are collected in <https://docs.google.com/spreadsheets/d/${process.env.spreadSheetId}|this spreadsheet>.`,
-            },
-          ],
-        });
-        return controller.storage.users.get(
-          event.user,
-          (err, user_data) => {
-            if (user_data) {
-              const {
-                raterUser,
-                accountableUser,
-                reason,
-                rating,
-                notes,
-                timeStamp,
-              } = user_data;
-              /*
-               * Post a notification to the pre-selected channel
-               */
-              return sendWebHookRating(
-                controller,
-                raterUser,
-                accountableUser,
-                reason,
-                rating,
-                notes,
-                timeStamp,
-              );
-            }
-          },
-        );
-      };
-      default: {
-        return false;
-      };
+  switch (event.text) {
+    case 'acknowledge': {
+      controller.storage.users.get(
+        event.user,
+        (storageError, data) => {
+          if (storageError) {
+            return oab.botkit.log(
+              `Could not load the storage data for user ${event.user}`,
+              storageError,
+            );
+          }
+          const { range } = data;
+          /*
+           * Save the data Google Sheets
+           */
+          updateSheet(
+            range,
+            [
+              [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                /*
+                 * Just set a simple acknoledgement txt
+                 */
+                'Acknowledged',
+                null,
+              ],
+            ],
+            debug ? console.log : () => {},
+          );
+        },
+      );
+      return oab.replyInteractive(event, {
+        text: "Ok! I've sent an acknowledgement on your behalf."
+      });
+    }
+    case 'ignore': {
+      return oab.replyInteractive(event, {
+        text: "Got it! You don't have to take any further action."
+      });
+    }
+    default: {
+      return false;
     };
+  };
 
-  })
-};
+});
