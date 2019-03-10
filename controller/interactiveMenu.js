@@ -50,7 +50,7 @@ module.exports = controller => controller.on(
         );
       }
       case 'acknowledge': {
-        updateSheetsValues(oab, controller, user, 'Acknowledged');
+        updateSheetsValues(oab, event, controller, user, 'Acknowledged');
         return oab.replyInteractive(event, {
           text: "Ok! I've sent an acknowledgement on your behalf."
         });
