@@ -42,9 +42,6 @@ module.exports = async controller => {
         try {
           const ratee = await getUserInfo(oab, event.user);
           updateSheetsValues(oab, event, controller, ratee, event.submission.response);
-          return oab.reply(event, {
-            text: "I've submitted your response. Nicely done!"
-          });
         } catch (error) {
           return oab.dialogError('Could not post your response to the Spreadsheet');
         }

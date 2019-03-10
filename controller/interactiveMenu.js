@@ -21,32 +21,6 @@ module.exports = controller => controller.on(
         return oab.replyWithDialog(
           event,
           responseDialog(oab).asObject(),
-          (replyError, response) => {
-            if (replyError) {
-              return oab.botkit.log(
-                `Could not create the response dialog user ${displayName} (${userId})`,
-                replyError,
-              );
-            }
-            /*
-             * Delete the last message (via the API directly)
-             */
-            bot.api.im.history(
-              { channel: event.channel, count: 1 },
-              (apiError, historyResponse) => {
-                if (apiError) {
-                  return oab.botkit.log(
-                    `Could not get the last message for channel ${event.channel}`,
-                    replyError,
-                  );
-                }
-                return bot.api.chat.delete({
-                  channel: event.channel,
-                  ts: historyResponse.messages[0].ts,
-                });
-              },
-            );
-          },
         );
       }
       case 'acknowledge': {
