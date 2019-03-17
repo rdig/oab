@@ -39,5 +39,6 @@
   "webhook.stats.footer": "_All stats data is taken from <%%spreadsheet_link%%|this spreadsheet>_",
   "webhook.stats.appNameVersion": "%%app_name%%, version: %%version%%",
   "webhook.stats.noDataNotice": "_*No rating data available yet :(* Submit feedback to see stats._",
-  "webhook.stats.fetcherror": "*ERROR* Could not fetch sheets data. Please try again later"
+  "webhook.stats.fetcherror": "*ERROR* Could not fetch sheets data. Please try again later",
+  "slashCommand.help.description": "_%%app_name%%_ basic usage:\n\n%%help_command%% - Displays this usage message\n%%stats_command%% - Displays the ratings leaderboard\n%%rating_command%% - Opens the submissions dialog\n\n_Version: %%version%%_\nMore info: %%repo_link%%"
 }
