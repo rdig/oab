@@ -1,5 +1,6 @@
 const { name, description, version, homepage } = require('../package.json');
 const getUserInfo = require('../utils/getUserInfo');
+const getMessageTemplate = require('../utils/getMessageTemplate');
 
 module.exports = (
   oab,
@@ -36,14 +37,18 @@ module.exports = (
         coversation.say({
           attachments: [
             {
-              text: `
-*${displayName}* just submitted a response to your accountability rating.
-_You can see all other rating submissions, (including this response), in <https://docs.google.com/spreadsheets/d/${process.env.spreadSheetId}|this spreadsheet>_`,
+              text: getMessageTemplate({
+                id: 'dm.response.description',
+                values: [
+                  displayName,
+                  `https://docs.google.com/spreadsheets/d/${process.env.spreadSheetId}`,
+                ],
+              }),
             },
             {
               color: '#142a4b',
               fields: [{
-                title: 'Respose',
+                title: getMessageTemplate({ id: 'dm.response.title' }),
                 value,
                 short: false
               }],

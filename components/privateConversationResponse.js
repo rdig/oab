@@ -1,4 +1,5 @@
 const { name, description, version, homepage } = require('../package.json');
+const getMessageTemplate = require('../utils/getMessageTemplate');
 
 module.exports = (oab, event, controller, { userId, displayName }) => oab.startPrivateConversation(
   { user: userId },
@@ -29,8 +30,8 @@ module.exports = (oab, event, controller, { userId, displayName }) => oab.startP
         } = data;
 
         const ratingsList = {
-          '5': 'Positive',
-          '-5': 'Negative',
+          '5': getMessageTemplate({ id: 'dm.rating.positive' }),
+          '-5': getMessageTemplate({ id: 'dm.rating.negative' }),
         };
 
         const colorsList = {
@@ -40,12 +41,12 @@ module.exports = (oab, event, controller, { userId, displayName }) => oab.startP
 
         const fields = [
             {
-              title: 'Rating',
+              title: getMessageTemplate({ id: 'dm.rating.title' }),
               value: ratingsList[rating],
               short: false
             },
             {
-              title: 'Reason',
+              title: getMessageTemplate({ id: 'dm.rating.reasonTitle' }),
               value: reason,
               short: false
             },
@@ -53,7 +54,7 @@ module.exports = (oab, event, controller, { userId, displayName }) => oab.startP
 
         if (notes) {
           fields.push({
-            title: 'Notes',
+            title: getMessageTemplate({ id: 'dm.rating.detailsTitle' }),
             value: notes,
             short: false
           });
@@ -62,9 +63,13 @@ module.exports = (oab, event, controller, { userId, displayName }) => oab.startP
         coversation.say({
           attachments: [
             {
-              text: `
-*${raterUser}* just submitted a new accountability rating for you.
-_You can see all other rating submissions, (including this), in <https://docs.google.com/spreadsheets/d/${process.env.spreadSheetId}|this spreadsheet>_`,
+              text: getMessageTemplate({
+                id: 'dm.rating.description',
+                values: [
+                  raterUser,
+                  `https://docs.google.com/spreadsheets/d/${process.env.spreadSheetId}`,
+                ],
+              }),
             },
             {
               color: colorsList[rating],
@@ -77,24 +82,29 @@ _You can see all other rating submissions, (including this), in <https://docs.go
         coversation.ask({
           attachments: [
             {
-              text: `Would you like to respond to *${raterUser}'s* rating of you ?`,
+              text: getMessageTemplate({
+                id: 'dm.rating.askDescription',
+                values: [
+                  raterUser,
+                ],
+              }),
               callback_id: 'rating_response_from_dm',
               actions: [
                 {
-                  "text": "Respond",
+                  "text": getMessageTemplate({ id: 'dm.rating.buttonRespond' }),
                   "name":"respond",
                   "value": "respond",
                   "type": "button",
                   "style": "primary",
                 },
                 {
-                  "text": "Acknowledge",
+                  "text": getMessageTemplate({ id: 'dm.rating.buttonAcknowledge' }),
                   "name":"acknowledge",
                   "value": "acknowledge",
                   "type": "button",
                 },
                 {
-                  "text": "Ignore",
+                  "text": getMessageTemplate({ id: 'dm.rating.buttonIgnore' }),
                   "name": "ignore",
                   "value": "ignore",
                   "type": "button",

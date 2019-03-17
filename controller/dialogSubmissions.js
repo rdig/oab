@@ -2,6 +2,7 @@ require('node-env-file')('.env');
 const getUserInfo = require('../utils/getUserInfo');
 const saveDialogToSheets = require('../lib/saveDialogToSheets');
 const updateSheetsValues = require('../lib/updateSheetsValues');
+const getMessageTemplate = require('../utils/getMessageTemplate');
 
 module.exports = async controller => {
   controller.middleware.receive.use((oab, event, next) => {
@@ -31,19 +32,24 @@ module.exports = async controller => {
           const ratee = await getUserInfo(oab, event.submission.accountableUser);
           oab.whisper(
             event,
-            `Your rating was submitted successfully! *${ratee.displayName}* was also notified!
-    _You can see all the other submissions in <https://docs.google.com/spreadsheets/d/${process.env.spreadSheetId}|this spreadsheet>_`
+            getMessageTemplate({
+              id: 'dialog.rating.submitSuccess',
+              values: [
+                ratee.displayName,
+                `https://docs.google.com/spreadsheets/d/${process.env.spreadSheetId}`,
+              ],
+            }),
           );
           return saveDialogToSheets(oab, event, controller, rater, ratee);
         } catch (error) {
-          return oab.dialogError('Could not post your submission to the Spreadsheet');
+          return oab.dialogError(getMessageTemplate({ id: 'dialog.rating.submitError' }));
         }
       case 'response_submission_dialog':
         try {
           const ratee = await getUserInfo(oab, event.user);
           updateSheetsValues(oab, event, controller, ratee, event.submission.response);
         } catch (error) {
-          return oab.dialogError('Could not post your response to the Spreadsheet');
+          return oab.dialogError(getMessageTemplate({ id: 'dialog.rating.submitError' }));
         }
       default: {
         return false;

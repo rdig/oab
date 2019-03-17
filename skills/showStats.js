@@ -4,6 +4,7 @@ const sendWebHookStats = require('../controller/sendWebHookStats');
 const formatRatingData = require('../utils/formatRatingData');
 const formatRaterData = require('../utils/formatRaterData');
 const { description } = require('../package.json');
+const getMessageTemplate = require('../utils/getMessageTemplate');
 
 module.exports = async (controller, oab, event) => {
   try {
@@ -18,7 +19,7 @@ module.exports = async (controller, oab, event) => {
   } catch (error) {
     return oab.replyPublicDelayed(
       event,
-      '`ERROR` Could not fetch sheets data. Please try again later',
+      getMessageTemplate({ id: 'webhook.stats.fetcherror' }),
     );
   }
 };

@@ -1,13 +1,19 @@
-const { description, version } = require('../package.json');
+const { description, version, homepage } = require('../package.json');
+const getMessageTemplate = require('../utils/getMessageTemplate');
 
-module.exports = (oab, event) => {
-  const helpMessage = `_${description}_ basic usage:
+const SLASH_COMMAND = 'oab';
 
-${'`/accountable help`'} - Displays this usage message
-${'`/accountable stats`'} - Displays the ratings leaderboard
-${'`/accountable submit`, `/accountable rate` or `/accountable`'} - Opens the submissions dialog
-
-_Version: ${version}_
-More info: https://github.com/rdig/oab`;
-  return oab.replyPrivateDelayed(event, helpMessage);
-};
+module.exports = (oab, event) => oab.replyPrivateDelayed(
+  event,
+  getMessageTemplate({
+    id: 'slashCommand.help.description',
+    values: [
+      description,
+      `\`/${SLASH_COMMAND} help\``,
+      `\`/${SLASH_COMMAND} stats\``,
+      `\`/${SLASH_COMMAND} submit\` or \`/${SLASH_COMMAND} rate\` or \`/${SLASH_COMMAND}\``,
+      version,
+      homepage,
+    ],
+  }),
+);
