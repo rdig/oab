@@ -1,14 +1,25 @@
+const getMessageTemplate = require('../utils/getMessageTemplate');
+
 module.exports = oab => oab
   .createDialog(
-    'Open Accountability',
+    /*
+     * Title
+     */
+    getMessageTemplate({ id: 'dialog.rating.title' }),
     'accountability_submission_dialog',
-    'Submit',
+    /*
+     * Submit Button
+     */
+    getMessageTemplate({ id: 'dialog.rating.buttonSubmit' }),
   )
   /*
    * Subject (User)
    */
   .addSelect(
-    'User',
+    /*
+     * User Select Title
+     */
+    getMessageTemplate({ id: 'dialog.rating.peerSelectTitle' }),
     'accountableUser',
     null,
     null,
@@ -21,7 +32,10 @@ module.exports = oab => oab
    * Rating
    */
   .addSelect(
-    'Rating',
+    /*
+     * Rating Select Title
+     */
+    getMessageTemplate({ id: 'dialog.rating.ratingSelectTitle' }),
     'rating',
     null,
     [
@@ -39,18 +53,27 @@ module.exports = oab => oab
    * Reason
    */
   .addText(
-    'Reason',
+    /*
+     * Reason Input Title
+     */
+    getMessageTemplate({ id: 'dialog.rating.reasonInputTitle' }),
     'reason',
   )
   /*
    * Notes
    */
   .addTextarea(
-    'Additional Notes',
+    /*
+     * Notes Textarea Title
+     */
+    getMessageTemplate({ id: 'dialog.rating.detailsTextareaTitle' }),
     'notes',
     null,
     {
-      placeholder: 'Optional explanation for your reasoning',
+      /*
+       * Notes Textarea Placeholder
+       */
+      placeholder: getMessageTemplate({ id: 'dialog.rating.detailsTextareaPlaceholder' }),
       optional: true,
     }
   );

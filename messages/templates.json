@@ -1,3 +1,9 @@
 {
-  "component.id.description": "hello this is the %%place%% template"
+  "dialog.rating.title": "Submit Peer Feedback",
+  "dialog.rating.buttonSubmit": "Submit",
+  "dialog.rating.peerSelectTitle": "Peer",
+  "dialog.rating.ratingSelectTitle": "Feedback",
+  "dialog.rating.reasonInputTitle": "Reason",
+  "dialog.rating.detailsTextareaTitle": "Additional details",
+  "dialog.rating.detailsTextareaPlaceholder": "Optional explanation for your reasoning"
 }
