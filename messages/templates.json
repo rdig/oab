@@ -22,7 +22,7 @@
   "dm.rating.askDescription": "How would you like to respond to *%%rater%%'s* submission?",
   "dm.rating.buttonRespond": "Comment",
   "dm.rating.buttonAcknowledge": "Acknowledge",
-  "dm.rating.acknowledgeText": "Acknowledge",
+  "dm.rating.acknowledgeText": "Acknowledged",
   "dm.rating.buttonIgnore": "Ignore",
   "dm.response.title": "Response",
   "dm.response.description": "*%%ratee%%* just submitted a response to your feedback submission.\n_You can see all feedback submissions in <%%spreadsheet_link%%|this spreadsheet>_",
