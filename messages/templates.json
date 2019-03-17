@@ -5,5 +5,7 @@
   "dialog.rating.ratingSelectTitle": "Feedback",
   "dialog.rating.reasonInputTitle": "Reason",
   "dialog.rating.detailsTextareaTitle": "Additional details",
-  "dialog.rating.detailsTextareaPlaceholder": "Optional explanation for your reasoning"
+  "dialog.rating.detailsTextareaPlaceholder": "Optional explanation for your reasoning",
+  "dialog.rating.submitSuccess": "Your feedback was submitted successfully! *%%ratee%%* was also notified.\n_You can see all submissions in <%%spreadsheet_link%%|this spreadsheet>_",
+  "dialog.rating.submitError": "Could not post your response to the Spreadsheet"
 }
