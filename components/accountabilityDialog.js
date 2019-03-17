@@ -40,11 +40,11 @@ module.exports = oab => oab
     null,
     [
       {
-        label:'Positive',
+        label: getMessageTemplate({ id: 'dialog.rating.positive' }),
         value:'5',
       },
       {
-        label:'Negative',
+        label: getMessageTemplate({ id: 'dialog.rating.negative' }),
         value:'-5',
       },
     ],
