@@ -1,18 +1,16 @@
+const getMessageTemplate = require('../utils/getMessageTemplate');
+
 module.exports = oab => oab
   .createDialog(
-    'Response',
+    getMessageTemplate({ id: 'dialog.response.title' }),
     'response_submission_dialog',
-    'Respond',
+    getMessageTemplate({ id: 'dialog.response.buttonSubmit' }),
   )
   /*
    * Response
    */
   .addTextarea(
-    'Accountability Rating Response',
+    getMessageTemplate({ id: 'dialog.response.textareaTitle' }),
     'response',
-    null,
-    {
-      placeholder: "While the reponse is optional, it's highly recommended",
-      optional: true,
-    }
+    null
   );
