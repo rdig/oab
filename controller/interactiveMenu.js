@@ -2,6 +2,7 @@ require('node-env-file')('.env');
 const updateSheetsValues = require('../lib/updateSheetsValues');
 const getUserInfo = require('../utils/getUserInfo');
 const responseDialog = require('../components/responseDialog');
+const getMessageTemplate = require('../utils/getMessageTemplate');
 
 module.exports = controller => controller.on(
   'interactive_message_callback',
@@ -24,14 +25,20 @@ module.exports = controller => controller.on(
         );
       }
       case 'acknowledge': {
-        updateSheetsValues(oab, event, controller, user, 'Acknowledged');
+        updateSheetsValues(
+          oab,
+          event,
+          controller,
+          user,
+          getMessageTemplate({ id: 'dm.rating.acknowledgeText' }),
+        );
         return oab.replyInteractive(event, {
-          text: "Ok! I've sent an acknowledgement on your behalf."
+          text: getMessageTemplate({ id: 'dm.response.acknowledgeSuccess' }),
         });
       }
       case 'ignore': {
         return oab.replyInteractive(event, {
-          text: "Got it! You don't have to take any further action."
+          text: getMessageTemplate({ id: 'dm.response.ignoreSuccess' }),
         });
       }
       default: {
