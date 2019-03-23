@@ -95,7 +95,6 @@ module.exports = async (oab, event) => {
         * Notes Textarea Placeholder
         */
         placeholder: getMessageTemplate({ id: 'dialog.rating.detailsTextareaPlaceholder' }),
-        optional: true,
       }
     );
 };
