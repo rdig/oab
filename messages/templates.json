@@ -4,7 +4,7 @@
   "dialog.rating.peerSelectTitle": "Peer",
   "dialog.rating.ratingSelectTitle": "Feedback",
   "dialog.rating.positive": "Fuck ya!",
-  "dialog.rating.negative": "WTF? _...and how can I help?_",
+  "dialog.rating.negative": "WTF? ...and how can I help?",
   "dialog.rating.reasonInputTitle": "Reason",
   "dialog.rating.detailsTextareaTitle": "Additional details",
   "dialog.rating.detailsTextareaPlaceholder": "Describe the reason. What behaviors do you want to see more of? How can you support that?",
