@@ -51,12 +51,10 @@ module.exports = values => {
      * @NOTE Can't use the short hand here since we're dealing with
      * negative integers
      */
-    .sort((firstArray, secondArray) => {
-      if (firstArray[1] > secondArray[1]) {
-        return 0;
-      }
-      return 1;
-    })
+    .sort(
+      (firstArray, secondArray) =>
+        (parseInt(secondArray[1], 10) - parseInt(firstArray[1], 10)),
+    )
     .map((entry, index, ratings) => {
       const previousRatingEntry = ratings[index - 1];
       const previousPlace = previousRatingEntry ? previousRatingEntry[4] : 0;
