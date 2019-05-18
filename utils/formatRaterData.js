@@ -46,7 +46,10 @@ module.exports = values => {
         negativeCount
       ];
     })
-    .sort((firstArray, secondArray) => secondArray[1] - firstArray[1])
+    .sort(
+      (firstArray, secondArray) =>
+        (parseInt(secondArray[1], 10) - parseInt(firstArray[1], 10)),
+      )
     .map((entry, index, ratings) => {
       const previousRaterEntry = ratings[index - 1];
       const previousPlace = previousRaterEntry ? previousRaterEntry[4] : 0;
